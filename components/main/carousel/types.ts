@@ -1,4 +1,4 @@
-import { TCarouselItem } from '@/types';
+import { TCarouselItem } from '@/common/types';
 
 export type TCarousel = {
   carouselList: TCarouselItem[];

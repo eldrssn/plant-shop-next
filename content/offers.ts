@@ -1,7 +1,7 @@
-import { TOfferItem } from '@/components/ui/OfferItem/types';
-import { OfferPositions } from '@/types';
+import { TAdItem } from '@/components/main/ad-item/types';
+import { OfferPositions } from '@/common/types';
 
-export const offersMain: TOfferItem[] = [
+export const firstAds: TAdItem[] = [
   {
     title: 'Outdoor plants',
     description:
@@ -22,7 +22,7 @@ export const offersMain: TOfferItem[] = [
   },
 ];
 
-export const offersBottom: TOfferItem[] = [
+export const secondAds: TAdItem[] = [
   {
     title: '(Almost) unkillable houseplants',
     description:

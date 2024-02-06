@@ -4,16 +4,16 @@ export type LinkListItem = {
   link: string;
 };
 
-export type TSocialLinkList = LinkListItem & {
+export type TSocialLinks = LinkListItem & {
   Icon: () => JSX.Element;
 };
 
-export type TFooterListItem = {
+export type TCommonLink = {
   id: number;
   title: string;
   links: LinkListItem[];
 };
 
-export type TFooterLinksList = TFooterListItem & {
+export type TCommonLinks = TCommonLink & {
   order: number;
 };

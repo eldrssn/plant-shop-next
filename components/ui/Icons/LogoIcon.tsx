@@ -1,4 +1,4 @@
-import { Icon } from '../ButtonIcon';
+import { Icon } from './Icon';
 
 const LogoIcon = () => (
   <Icon

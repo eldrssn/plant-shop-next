@@ -1,13 +1,10 @@
-import {
-  TFooterListItem,
-  TSocialLinkList,
-} from '@/components/main/footer/types';
+import { TCommonLink, TSocialLinks } from '@/components/main/footer/types';
 
-import { FBIcon } from '@/components/ui/Icons/FBIcon';
-import { InstIcon } from '@/components/ui/Icons/InstIcon';
-import { TwitterIcon } from '@/components/ui/Icons/TwitterIcon';
+import { FBIcon } from '@/components/ui/icons/FBIcon';
+import { InstIcon } from '@/components/ui/icons/InstIcon';
+import { TwitterIcon } from '@/components/ui/icons/TwitterIcon';
 
-export const footerList: TFooterListItem[] = [
+export const commonLinks: TCommonLink[] = [
   {
     id: 1,
     title: 'About',
@@ -77,7 +74,7 @@ export const footerList: TFooterListItem[] = [
   },
 ];
 
-export const socialLinksList: TSocialLinkList[] = [
+export const socialLinks: TSocialLinks[] = [
   {
     id: 1,
     title: 'twitter',
