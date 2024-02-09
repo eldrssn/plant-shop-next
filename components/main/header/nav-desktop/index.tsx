@@ -33,7 +33,7 @@ const NavDesktop = () => {
     <nav className="w-full">
       <MainCategories catalog={catalog} showMenu={showMenu} />
 
-      {isOpenMenu && <Background className="lg:top-20" />}
+      <Background className="lg:top-20" isOpen={isOpenMenu} />
 
       <Categories
         submenu={currentSubMenu}

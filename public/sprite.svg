@@ -56,6 +56,15 @@
     </svg>
   </symbol>
 
+  <symbol id="icon-close" viewBox="0 0 21 21">
+    <title>Close cross</title>
+    <g transform="translate(-315 -108)" fill-rule="nonzero">
+      <g transform="translate(315 108)">
+        <polygon points="21 17.5 14 10.5 21 3.5 17.5 0 10.5 7 3.5 0 0 3.5 7 10.5 0 17.5 3.5 21 10.5 14 17.5 21"></polygon>
+      </g>
+    </g>
+  </symbol>
+
   <!-- <symbol id="icon-small-pot" width="21" height="16" viewBox="1 -1 27 24">
     <title>Pot icon</title>
     <path d="M3.17867912,0 L25.8213209,0 L27,0 L26.826848,1.18510075 L24.1313995,19.6312816 C24.0346887,20.2927269 23.713026,20.9005123 23.2182113,21.335993 C22.7525423,21.7459921 22.1451192,22 21.4411177,22 L7.55888229,22 C6.85488085,22 6.2474577,21.7459921 5.78165622,21.335993 C5.28710647,20.9006472 4.9653113,20.2928617 4.86860053,19.6312816 L2.17315203,1.18510075 L2,0 L3.17867912,0 Z" stroke="#757373" stroke-width="1" fill="#757373" fill-rule="evenodd"></path>

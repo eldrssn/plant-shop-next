@@ -18,11 +18,11 @@ const NavMobile = () => {
         <ToggleNavButton onClick={openMenu} />
       </div>
 
-      {isOpen && <Background onClick={closeMenu} />}
+      <Background onClick={closeMenu} isOpen={isOpen} />
 
       <nav
         className={clsx(
-          `absolute left-0 top-0 max-w-[700px] w-full h-screen bg-backSecond 
+          `absolute left-0 top-0 max-w-[700px] w-full h-screen bg-backSecond z-20
           opacity-100 duration-200 transition-transform -translate-x-full overflow-hidden`,
           {
             'translate-x-0': isOpen,

@@ -12,12 +12,18 @@ const WithTransition: FC<TWithTransition> = ({
   timeout = 150,
   style: { defaultStyle, transitionStyles },
 }) => {
-  const nodeRef = createRef<HTMLElement>();
+  const nodeRef = createRef<HTMLDivElement>();
 
   return (
-    <Transition nodeRef={nodeRef} in={isOpen} timeout={timeout}>
+    <Transition
+      nodeRef={nodeRef}
+      in={isOpen}
+      timeout={timeout}
+      mountOnEnter={true}
+    >
       {(state) => (
         <div
+          ref={nodeRef}
           style={{
             ...defaultStyle,
             ...transitionStyles[state],
