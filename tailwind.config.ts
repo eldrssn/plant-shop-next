@@ -14,6 +14,9 @@ const config: Config = {
       colors: {
         backSecond: '#f6f2ea',
       },
+      boxShadow: {
+        checkout: '0 -2px 5px -3px #757373',
+      },
       keyframes: {
         wiggle: {
           '0%': { transform: 'translate(-15px)' },

@@ -26,7 +26,7 @@ const Categories: FC<TSubMenuList> = ({
         transitionStyles,
       }}
       isOpen={!!isOpenMenu}
-      classNames="bg-white border-t w-full top-[80px] left-0 absolute"
+      classNames="bg-white border-t w-full top-[80px] z-20 left-0 absolute"
     >
       <div onMouseLeave={closeMenu}>
         <div

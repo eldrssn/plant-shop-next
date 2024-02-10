@@ -1,7 +1,7 @@
-import { TCarouselItem } from '@/common/types';
+import { TItem } from '@/common/types';
 
 export type TCarousel = {
-  carouselList: TCarouselItem[];
+  carouselList: TItem[];
 };
 
 export enum Directions {
