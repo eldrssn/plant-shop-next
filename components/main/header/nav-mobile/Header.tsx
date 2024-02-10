@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { CloseMenuButton } from '@/components/ui/close-menu-button';
+import { CloseButton } from '@/components/ui/close-button';
 import { LogoIcon } from '@/components/ui/icons/LogoIcon';
 import { ArrowBackIcon } from '@/components/ui/icons/ArrowBackIcon';
 import { NavMobileContext } from '@/common/context/nav-mobile';
@@ -18,7 +18,7 @@ const Header = () => {
       ) : (
         <LogoIcon />
       )}
-      <CloseMenuButton onClick={closeMenu} />
+      <CloseButton onClick={closeMenu} />
     </div>
   );
 };

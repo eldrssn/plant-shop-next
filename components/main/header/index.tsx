@@ -6,12 +6,15 @@ import { Icon } from '@/components/ui/icons/Icon';
 import { Nav } from './Nav';
 import { SearchBar } from '../search-bar';
 import { useState } from 'react';
+import { Cart } from '../cart';
 
 const Header = () => {
   const [isOpenedSearchBar, setIsOpenSearchBar] = useState(false);
+  const [isOpenedCart, setIsOpenCart] = useState(true);
 
   const toggleSearchBar = () =>
     setIsOpenSearchBar((isOpenedSearchBar) => !isOpenedSearchBar);
+  const toggleCart = () => setIsOpenCart((isOpenedCart) => !isOpenedCart);
 
   return (
     <>
@@ -29,7 +32,7 @@ const Header = () => {
                 <Icon width="20px" height="25px" svgId="icon-magnify-glass" />
               </button>
 
-              <button className="p-3" onClick={toggleSearchBar}>
+              <button className="p-3" onClick={toggleCart}>
                 <Icon width="20px" height="25px" svgId="icon-shopping-bag" />
               </button>
             </div>
@@ -38,6 +41,7 @@ const Header = () => {
       </header>
 
       <SearchBar handleClose={toggleSearchBar} isOpen={isOpenedSearchBar} />
+      <Cart handleClose={toggleCart} isOpen={isOpenedCart} />
     </>
   );
 };

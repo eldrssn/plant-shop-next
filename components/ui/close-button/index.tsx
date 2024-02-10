@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { TOnClick } from '@/common/types';
 
-const CloseMenuButton: FC<TOnClick> = ({ onClick }) => (
+const CloseButton: FC<TOnClick> = ({ onClick }) => (
   <button type="button" className="w-5 h-4" onClick={onClick}>
     <span
       className="h-4 relative w-4 
@@ -12,4 +12,4 @@ const CloseMenuButton: FC<TOnClick> = ({ onClick }) => (
   </button>
 );
 
-export { CloseMenuButton };
+export { CloseButton };

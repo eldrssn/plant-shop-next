@@ -5,7 +5,7 @@ import { WithTransition } from '@/common/hocs/WithTransition';
 
 import { SearchInput } from './SearchInput';
 import { PopularLinks } from './PopularLinks';
-import { ButtonClose } from './ButtonClose';
+import { CloseButton } from './CloseButton';
 
 import { defaultStyle, transitionStyles } from './animation';
 
@@ -28,7 +28,9 @@ export const SearchBar: FC<TSearchBar> = ({ handleClose, isOpen }) => {
         classNames="fixed top-16 flex w-full z-10 flex-col items-center h-auto md:bg-zinc-50 bg-zinc-50/80 backdrop-blur-sm shadow-lg"
       >
         <>
-          <ButtonClose onClick={handleClose} />
+          <div className="ml-auto">
+            <CloseButton onClick={handleClose} />
+          </div>
 
           <div className="w-[80%] mb-8">
             <SearchInput />

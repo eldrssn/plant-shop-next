@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { TCarouselItem } from '@/common/types';
+import { TItem } from '@/common/types';
 import { LinkToOptions } from './LinkToOptions';
 import { ActionToCart } from './ActionToCart';
 
-const CarouselItem: FC<TCarouselItem> = ({
+const CarouselItem: FC<TItem> = ({
   id,
   title,
   description,

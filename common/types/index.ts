@@ -17,7 +17,7 @@ export enum OfferPositions {
   RIGHT = 'right',
 }
 
-export type TCarouselItem = {
+export type TItem = {
   id: number;
   title: string;
   description?: string;

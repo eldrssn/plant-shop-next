@@ -1,6 +1,6 @@
-import { TCarouselItem } from '@/common/types';
+import { TItem } from '@/common/types';
 
-export const popularItems: TCarouselItem[] = [
+export const popularItems: TItem[] = [
   {
     id: 1,
     title: 'Jolene',
@@ -80,7 +80,7 @@ export const popularItems: TCarouselItem[] = [
   },
 ];
 
-export const topItems: TCarouselItem[] = [
+export const topItems: TItem[] = [
   {
     id: 1,
     description: '120-130cm',
