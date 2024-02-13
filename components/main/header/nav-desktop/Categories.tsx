@@ -28,32 +28,31 @@ const Categories: FC<TSubMenuList> = ({
       isOpen={!!isOpenMenu}
       classNames="bg-white border-t w-full top-[80px] z-20 left-0 absolute"
     >
-      <div onMouseLeave={closeMenu}>
-        <div
-          className={clsx(
-            'flex flex-row max-w-[1680px] [@media(min-width:1200px)]:pl-20 pl-5 m-auto h-full',
-            {
-              'h-0': !isOpenMenu,
-            }
-          )}
-        >
-          <div className="ml-auto flex flex-row basis-2/3 max-w-[53.5rem] mt-12">
-            <div className="text-xl font-medium basis-1/5 [@media(min-width:1200px)]:basis-1/4">
-              {mainSubcategory.title}
-            </div>
+      <div
+        onMouseLeave={closeMenu}
+        className={clsx(
+          'flex flex-row max-w-[1680px] [@media(min-width:1200px)]:pl-20 pl-5 m-auto h-full',
+          {
+            'h-0': !isOpenMenu,
+          }
+        )}
+      >
+        <div className="ml-auto flex flex-row basis-2/3 max-w-[53.5rem] mt-12">
+          <div className="text-xl font-medium basis-1/5 [@media(min-width:1200px)]:basis-1/4">
+            {mainSubcategory.title}
+          </div>
 
-            <SubMenuList submenu={subcategories} isOpenMenu={isOpenMenu} />
-          </div>
-          <div className="relative h-full w-full overflow-hidden aspect-square basis-1/3">
-            {picture && (
-              <Image
-                fill={true}
-                src={picture}
-                alt={mainSubcategory.title}
-                className="object-cover object-center h-full"
-              />
-            )}
-          </div>
+          <SubMenuList submenu={subcategories} isOpenMenu={isOpenMenu} />
+        </div>
+        <div className="relative h-full w-full overflow-hidden aspect-square basis-1/3">
+          {picture && (
+            <Image
+              fill={true}
+              src={picture}
+              alt={mainSubcategory.title}
+              className="object-cover object-center h-full"
+            />
+          )}
         </div>
       </div>
     </WithTransition>
