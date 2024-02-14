@@ -50,7 +50,7 @@ export const ItemInfo: FC<TItem> = ({
       </div>
 
       <p className="font-bold text-sm mb-2">{fullName}</p>
-      <p className="text-neutral-500 text-sm">{pronunciation}</p>
+      <p className="text-neutral-500 text-sm mb-2">{pronunciation}</p>
 
       <FilledActionBox className="max-w-full mb-12 mt-5 md:mt-auto md:mb-0">
         Add to bag

@@ -1,5 +1,5 @@
 import { details } from '@/content/details';
-import { Detail } from './Detail';
+import { Detail } from '../../../modules/home/Detail';
 
 const DetailsScreen = () => (
   <section className="pt-12 bg-zinc-50">
