@@ -1,16 +1,16 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { TDetail } from '../types';
+import { TDetail } from './types';
 
 const Detail: FC<TDetail> = ({ icon, title, descriptions }) => (
   <li className="flex flex-col items-center px-4 mb-12 text-center md:flex-row md:items-start md:text-start md:basis-1/2 lg:basis-1/4">
-    <div className="relative">
+    <div className="relative mb-4 md:mr-4 md:mt-[6px]">
       <Image
         src={icon}
         alt={title}
         width={30}
         height={30}
-        className="mb-4 md:mr-4 md:mt-[6px] aspect-square"
+        className="max-w-[30px]"
       />
     </div>
 

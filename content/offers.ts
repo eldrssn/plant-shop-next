@@ -1,5 +1,5 @@
-import { TAdItem } from '@/components/main/ad-item/types';
 import { OfferPositions } from '@/common/types';
+import { TAdItem } from '@/modules/home/types';
 
 export const firstAds: TAdItem[] = [
   {
