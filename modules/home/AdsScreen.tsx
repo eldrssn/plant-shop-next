@@ -1,6 +1,6 @@
-import { AdItem } from '@/pages/home/components/AdItem';
+import { AdItem } from '@/modules/home/AdItem';
 import { FC } from 'react';
-import { TAdsScreen } from '../types';
+import { TAdsScreen } from './types';
 
 const AdsScreen: FC<TAdsScreen> = ({ ads }) => (
   <section className="bg-zinc-50">

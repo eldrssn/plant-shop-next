@@ -10,7 +10,7 @@ import { Cart } from '../cart';
 
 const Header = () => {
   const [isOpenedSearchBar, setIsOpenSearchBar] = useState(false);
-  const [isOpenedCart, setIsOpenCart] = useState(true);
+  const [isOpenedCart, setIsOpenCart] = useState(false);
 
   const toggleSearchBar = () =>
     setIsOpenSearchBar((isOpenedSearchBar) => !isOpenedSearchBar);

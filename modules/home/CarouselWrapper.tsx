@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { Carousel } from '@/components/main/carousel';
-import { TCarouselWrapper } from '../types';
+import { TCarouselWrapper } from './types';
 
 const CarouselWrapper: FC<TCarouselWrapper> = ({
   header,

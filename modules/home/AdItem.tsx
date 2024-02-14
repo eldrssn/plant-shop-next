@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import { FilledActionBox } from '@/components/ui/filled-action-button';
 import { OfferPositions } from '@/common/types';
-import { TAdItem } from '../types';
+import { TAdItem } from './types';
 
 const AdItem: FC<TAdItem> = ({
   title,

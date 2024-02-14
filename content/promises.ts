@@ -1,4 +1,4 @@
-import { TPromiseItem } from '@/pages/home/types';
+import { TPromiseItem } from '@/modules/home/types';
 
 export const promises: TPromiseItem[] = [
   {

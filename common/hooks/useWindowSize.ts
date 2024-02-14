@@ -1,6 +1,6 @@
 'use client';
 
-import { DESKTOP_WIDTH } from '@/common/constants';
+import { DESKTOP_WIDTH, TABLET_WIDTH } from '@/common/constants';
 import { useEffect, useState } from 'react';
 
 type WindowSidesType = {
@@ -40,6 +40,7 @@ const useWindowSize = () => {
     windowWidth,
     windowHeight,
     isDesktop: windowWidth && DESKTOP_WIDTH < windowWidth,
+    isTablet: windowWidth && TABLET_WIDTH < windowWidth,
   };
 };
 

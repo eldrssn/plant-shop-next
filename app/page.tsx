@@ -1,5 +1,25 @@
-import { HomePage } from '@/pages/home';
+import { firstAds, secondAds } from '@/content/offers';
+import { HeroScreen } from '@/modules/home/HeroScreen';
+import { DescriptionScreen } from '@/modules/home/DescriptionScreen';
+import { AdsScreen } from '@/modules/home/AdsScreen';
+import { PromiseScreen } from '@/modules/home/PromiseScreen';
+import { DeliveryOffer } from '@/modules/home/DeliveryOffer';
+import { DetailsScreen } from '@/modules/home/DetailsScreen';
+import { PopularItemsScreen } from '@/modules/home/PopularItemsScreen';
+import { TopItemsScreen } from '@/modules/home/TopItemsScreen';
 
 export default function Page() {
-  return <HomePage />;
+  return (
+    <main>
+      <HeroScreen />
+      <PromiseScreen />
+      <DescriptionScreen />
+      <PopularItemsScreen />
+      <AdsScreen ads={firstAds} />
+      <TopItemsScreen />
+      <AdsScreen ads={secondAds} />
+      <DeliveryOffer />
+      <DetailsScreen />
+    </main>
+  );
 }

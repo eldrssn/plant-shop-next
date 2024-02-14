@@ -5,7 +5,7 @@ const HeroScreen = () => (
   <section className="bg-stone-200">
     <div
       className="-mt-[64px] md:mt-0 w-full h-screen flex flex-col 
-    md:flex-row-reverse max-w-[1680px] m-auto md:max-h-[764px]"
+      md:flex-row-reverse max-w-[1680px] m-auto md:max-h-[764px]"
     >
       <div className="relative basis-1/2 h-1/2 md:h-full">
         <Image

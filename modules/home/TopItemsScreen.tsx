@@ -1,4 +1,4 @@
-import { CarouselWrapper } from '@/pages/home/components/CarouselWrapper';
+import { CarouselWrapper } from '@/modules/home/CarouselWrapper';
 import { topItems } from '@/content/carousel';
 
 const TopItemsScreen = () => (
