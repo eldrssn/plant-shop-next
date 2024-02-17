@@ -1,0 +1,732 @@
+[
+  {
+    "url": "swiss-cheese-plant-1278",
+    "productType": "plants",
+    "title": "Big Chaz",
+    "realName": "Swiss cheese plant",
+    "latinName": "Monstera Deliciosa; Ceriman; Custard plant; Indian ivy; Fruit salad plant; Mexican breadfruit; Cheese plant",
+    "details": {
+      "enviroment": "indoor",
+      "light": "light-shade",
+      "careLevel": "easy",
+      "wind": "true",
+      "plantType": "climbing"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1682421685/t6jygdtkklhbxv6a4twn.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1682421716/mqezvymitqop7oqoijbm.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1682421683/bkldumvorkomuegmzken.jpg"
+    ],
+    "variants": [
+      {
+        "size": "120-130",
+        "price": 180,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "aspidistra-44",
+    "productType": "plants",
+    "title": "Howard",
+    "realName": "Aspidistra",
+    "latinName": "Cast iron plant; Bar room plant; Aspidistra Elatior",
+    "details": {
+      "enviroment": "indoor",
+      "light": "shade",
+      "careLevel": "unkillable",
+      "wind": "true",
+      "plantType": "palms-trees"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1695308085/lb56arga0wyxyaphgnyj.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1539350653/products/aspidistra-a07d31.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1606924834/ovl6lqtpsb6ow1p5a87e.jpg"
+    ],
+    "variants": [
+      {
+        "size": "40-50",
+        "price": 25,
+        "inStock": "true",
+        "imgIndex": 0
+      },
+      {
+        "size": "60-70",
+        "price": 40,
+        "inStock": "true",
+        "imgIndex": 1
+      },
+      {
+        "size": "90-100",
+        "price": 85,
+        "inStock": "true",
+        "imgIndex": 2
+      }
+    ]
+  },
+  {
+    "url": "fiddle-leaf-fig-166",
+    "productType": "plants",
+    "title": "Fidel",
+    "realName": "Fiddle-leaf fig",
+    "latinName": "Ficus lyrata; Banjo fig; Ficus lyrata bambino",
+    "details": {
+      "enviroment": "indoor",
+      "light": "light-shade",
+      "careLevel": "easy",
+      "wind": "false",
+      "plantType": "palms-trees"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1526660714/products/ficus-lyrata-fe6a17.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1529675231/products/ficus-lyrata-fddecc.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1595008821/twlat4vqvxzsiswogwcg.jpg"
+    ],
+    "variants": [
+      {
+        "size": "20-30",
+        "price": 12,
+        "inStock": "true",
+        "imgIndex": 0
+      },
+      {
+        "size": "100-110",
+        "price": 50,
+        "inStock": "true",
+        "imgIndex": 1
+      },
+      {
+        "size": "120-130",
+        "price": 180,
+        "inStock": "true",
+        "imgIndex": 2
+      }
+    ]
+  },
+  {
+    "url": "marble-queen-pothos-814",
+    "productType": "plants",
+    "title": "Lizzie",
+    "realName": "Marble Queen pothos",
+    "latinName": "Epipremnum pinnatum ‘Marble Queen’",
+    "details": {
+      "enviroment": "indoor",
+      "light": "light-shade",
+      "careLevel": "unkillable",
+      "wind": "true",
+      "plantType": "climbing"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1706200149/ru89j0zcbs4sbxzqf84u.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1706200149/ru89j0zcbs4sbxzqf84u.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1654000020/mlkm6skarfjqppwtdr6o.jpg"
+    ],
+    "variants": [
+      {
+        "size": "30-40",
+        "price": 18,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "dracaena-fragrans-171",
+    "productType": "plants",
+    "title": "Mick",
+    "realName": "Dracaena fragrans",
+    "latinName": "Dracaena Fragrans; Massangeana; Janet Craig; Dragon Plant; Dragon Tree",
+    "details": {
+      "enviroment": "indoor",
+      "light": "light-shade",
+      "careLevel": "easy",
+      "wind": "false",
+      "plantType": "palms-trees"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1564153926/products/dracaena-fragrans-18453e.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1591267619/n6hte7dxz9qmnhhsudwa.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1636714192/ccgumxohytjh5ceky5xz.jpg"
+    ],
+    "variants": [
+      {
+        "size": "60-70",
+        "price": 35,
+        "inStock": "true",
+        "imgIndex": 0
+      },
+      {
+        "size": "130-140",
+        "price": 85,
+        "inStock": "true",
+        "imgIndex": 1
+      }
+    ]
+  },
+  {
+    "url": "maranta-leuconeura-676",
+    "productType": "plants",
+    "title": "Jane",
+    "realName": "Maranta leuconeura",
+    "details": {
+      "enviroment": "indoor",
+      "light": "direct-sunlight",
+      "careLevel": "easy",
+      "wind": "false",
+      "plantType": "palms-trees"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1618415140/izhqkv2wrztzwkvn1ith.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1618415199/qjxbxz2gztsiwatpt37e.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1618415144/hfghnafhksgseetj67js.jpg"
+    ],
+    "variants": [
+      {
+        "size": "20-30",
+        "price": 18,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "ficus-microcarpa-moclame-780",
+    "productType": "plants",
+    "title": "Sarah",
+    "realName": "Ficus microcarpa moclame",
+    "latinName": "Pot Belly Fig; Laurel Fig; Laurel Rubber; Curtain Fig; Strangling Fig",
+    "details": {
+      "enviroment": "indoor",
+      "light": "direct-sunlight",
+      "careLevel": "easy",
+      "wind": "true",
+      "plantType": "palms-trees"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1626102693/dfbpkmpb8n6uo1gyzb7q.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1630662353/e0lnc8bo1wdhfuwpaexx.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1626102673/qgdp5sld1ajq7eotwdae.jpg"
+    ],
+    "variants": [
+      {
+        "size": "90-100",
+        "price": 50,
+        "inStock": "true",
+        "imgIndex": 0
+      },
+      {
+        "size": "100-110",
+        "price": 60,
+        "inStock": "true",
+        "imgIndex": 1
+      }
+    ]
+  },
+  {
+    "url": "maranta-leuconeura-676",
+    "productType": "plants",
+    "title": "Jane",
+    "realName": "Maranta leuconeura",
+    "details": {
+      "enviroment": "indoor",
+      "light": "direct-sunlight",
+      "careLevel": "easy",
+      "wind": "false",
+      "plantType": "palms-trees"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1618415140/izhqkv2wrztzwkvn1ith.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1618415199/qjxbxz2gztsiwatpt37e.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1618415144/hfghnafhksgseetj67js.jpg"
+    ],
+    "variants": [
+      {
+        "size": "20-30",
+        "price": 18,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "hydroponic-philodendron-white-wave-1215",
+    "productType": "plants",
+    "title": "Leo in glass",
+    "realName": "Hydroponic philodendron white wave",
+    "latinName": "Hydroponic philodendron birkin",
+    "details": {
+      "enviroment": "indoor",
+      "light": "light-shade",
+      "careLevel": "easy",
+      "wind": "false",
+      "plantType": "ferns"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1694001458/qgovrrhg846rwyzb95d5.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1674229553/ggwrc9ku0twmdnz7vlir.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1674228591/yikvx7osobel0u0obnsg.jpg"
+    ],
+    "variants": [
+      {
+        "size": "30-40",
+        "price": 32,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "parlour-palm-27",
+    "productType": "plants",
+    "title": "Sharon",
+    "realName": "Parlour Palm",
+    "latinName": "Chamaedorea elegans; Neanthe bella palm; Parlour palm",
+    "details": {
+      "enviroment": "indoor",
+      "light": "light-shade",
+      "careLevel": "unkillable",
+      "wind": "true",
+      "plantType": "palms-trees"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1670878529/yifqngx4dy3j9bivi6ma.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1670878519/w3dwc9dwzrra1sopflow.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1670878541/ih9xyrjlx3wwozvj2vai.jpg"
+    ],
+    "variants": [
+      {
+        "size": "40-50",
+        "price": 10,
+        "inStock": "true",
+        "imgIndex": 0
+      },
+      {
+        "size": "50-60",
+        "price": 20,
+        "inStock": "true",
+        "imgIndex": 1
+      },
+      {
+        "size": "70-80",
+        "price": 36,
+        "inStock": "true",
+        "imgIndex": 2
+      }
+    ]
+  },
+  {
+    "url": "epipremnum-global-green-1251",
+    "productType": "plants",
+    "title": "David",
+    "realName": "Epipremnum 'Global Green'",
+    "latinName": "Pothos",
+    "details": {
+      "enviroment": "indoor",
+      "light": "light-shade",
+      "careLevel": "unkillable",
+      "wind": "true",
+      "plantType": "climbing"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1694001688/r3yebpnrammavsecisrd.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1677680486/hal4sonkupw3dojg3zbu.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1677679583/avxfjkkv61mgvvftzuug.jpg"
+    ],
+    "variants": [
+      {
+        "size": "30-40",
+        "price": 18,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "chinese-money-plant-238",
+    "productType": "plants",
+    "title": "Penny",
+    "realName": "Chinese Money Plant",
+    "latinName": "Pilea; Pancake plant",
+    "details": {
+      "enviroment": "indoor",
+      "light": "light-shade",
+      "careLevel": "medium",
+      "wind": "true",
+      "plantType": "flowering"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1693404096/a2hkmboyvxze6eygh1y7.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1535552273/products/chinese-money-plant-ab109e.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1689265131/ptikxb5kjpmm2dssroz3.jpg"
+    ],
+    "variants": [
+      {
+        "size": "10-20",
+        "price": 15,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "rubber-plant-191",
+    "productType": "plants",
+    "title": "Rob",
+    "realName": "Rubber Plant",
+    "latinName": "Variegated Rubber plant; Ficus robusta",
+    "details": {
+      "enviroment": "indoor",
+      "light": "direct-sunlight",
+      "careLevel": "easy",
+      "wind": "true",
+      "plantType": "palms-trees"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1632759347/uighcq7b5pnm6hcrhxxa.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1515506112/products/variegated-rubber-plant-cabbbf.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1526658483/products/variegated-rubber-plant-f5b25f.jpg"
+    ],
+    "variants": [
+      {
+        "size": "30-40",
+        "price": 10,
+        "inStock": "true",
+        "imgIndex": 0
+      },
+      {
+        "size": "80-90",
+        "price": 60,
+        "inStock": "true",
+        "imgIndex": 1
+      }
+    ]
+  },
+  {
+    "url": "hydroponic-anthurium-lilli-1361",
+    "productType": "plants",
+    "title": "Penny",
+    "realName": "Hydroponic Anthurium 'lilli'",
+    "latinName": "Flamingo flower; Anthurium andraeanum",
+    "details": {
+      "enviroment": "indoor",
+      "light": "light-shade",
+      "careLevel": "medium",
+      "wind": "false",
+      "plantType": "flowering"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1702485245/vpi20ae7kgh2jtiiehrl.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1705428685/tmn8irphpjq7qup749be.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1702485274/fmq8aicxku0ulp5h5pfi.jpg"
+    ],
+    "variants": [
+      {
+        "size": "30-40",
+        "price": 32,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "rubber-plant-176",
+    "productType": "plants",
+    "title": "Robin",
+    "realName": "Rubber Plant",
+    "latinName": "Ficus elastica; Ficus robusta",
+    "details": {
+      "enviroment": "indoor",
+      "light": "light-shade",
+      "careLevel": "easy",
+      "wind": "true",
+      "plantType": "palms-trees"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1526658099/products/rubber-plant-f432b4.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1515506238/products/rubber-plant-cb39ad.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1529673792/products/rubber-plant-f83f36.jpg"
+    ],
+    "variants": [
+      {
+        "size": "30-40",
+        "price": 10,
+        "inStock": "true",
+        "imgIndex": 0
+      },
+      {
+        "size": "80-90",
+        "price": 60,
+        "inStock": "true",
+        "imgIndex": 1
+      }
+    ]
+  },
+  {
+    "url": "ceropegia-woodii-282",
+    "productType": "plants",
+    "title": "Peggy",
+    "realName": "Ceropegia woodii",
+    "latinName": "Ceropegia; String of Hearts; Hearts entangled; Sweetheart vine",
+    "details": {
+      "enviroment": "indoor",
+      "light": "shade",
+      "careLevel": "easy",
+      "wind": "true",
+      "plantType": "climbing"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1659622438/wtwjxndffczouhd1scct.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1535617645/products/ceropegia-woodii-aa6c6c.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1659700400/kospvyg0ozcnwfru4ree.jpg"
+    ],
+    "variants": [
+      {
+        "size": "20-30",
+        "price": 18,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "black-bamboo-1031",
+    "productType": "plants",
+    "title": "Bree",
+    "realName": "Black bamboo",
+    "latinName": "Fargesia ‘Winter Black’",
+    "details": {
+      "enviroment": "outdoor",
+      "light": "shade",
+      "careLevel": "unkillable",
+      "wind": "true",
+      "plantType": "bamboo-grasses"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1644312327/zqovan2ra5ihr9izobge.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1644312286/lt0fttxkunjxccoemdkl.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1644312358/nahe7a35fqksg5kj16fn.jpg"
+    ],
+    "variants": [
+      {
+        "size": "110-120",
+        "price": 60,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "camellia-japonica-white-1235",
+    "productType": "plants",
+    "title": "Clement",
+    "realName": "Camellia Japonica - white",
+    "latinName": "Common Camellia; Japanese Camellia",
+    "details": {
+      "enviroment": "outdoor",
+      "light": "light-shade",
+      "careLevel": "easy",
+      "wind": "false",
+      "plantType": "flowering"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1673282362/gwqs1yblctatsnwfdbu1.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1702637797/shvvnivukybsnfgvixsq.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1702401016/toj9m7af85xngbtnnfvb.jpg"
+    ],
+    "variants": [
+      {
+        "size": "70-80",
+        "price": 50,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "apple-tree-1039",
+    "productType": "plants",
+    "title": "Andre",
+    "realName": "Apple tree",
+    "latinName": "Malus domestica ‘Elstar’",
+    "details": {
+      "enviroment": "outdoor",
+      "light": "direct-sunlight",
+      "careLevel": "easy",
+      "wind": "true",
+      "plantType": "edibles"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1689323630/oepzw8eclprsgdropiaq.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1642014563/usuhqj5yy0jlli0bvqrs.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1689323690/kt76y4g1vn27rjwudwqu.jpg"
+    ],
+    "variants": [
+      {
+        "size": "90-100",
+        "price": 30,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "variegated-fatsia-japonica-672",
+    "productType": "plants",
+    "title": "Fergie",
+    "realName": "Variegated fatsia japonica",
+    "latinName": "Fatsia japonica variegata; Variegated paper plant; Fatsia spiders web’",
+    "details": {
+      "enviroment": "outdoor",
+      "light": "shade",
+      "careLevel": "unkillable",
+      "wind": "true",
+      "plantType": "palms-trees"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1644312468/kent5saznz2po0yzbjqa.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1644312543/otajwmf7wvqgwbactjev.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1644312542/rvfvzdb9gxblyfskoxqc.jpg"
+    ],
+    "variants": [
+      {
+        "size": "40-50",
+        "price": 30,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "star-jasmine-99",
+    "productType": "plants",
+    "title": "Jazz",
+    "realName": "Star Jasmine",
+    "latinName": "Trachelospermum Jasminoides; Climbing Jasmine; Confederate Jasmine; Chinese Jasmine; Trader’s Compass",
+    "details": {
+      "enviroment": "outdoor",
+      "light": "direct-sunlight",
+      "careLevel": "unkillable",
+      "wind": "true",
+      "plantType": "climbing"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1689329469/brhjlkbbyatfkzwcnnuo.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1689329614/mk7mw1rwaeguja5ej6op.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1689329497/rmgqppyay1ilpmjc9uzj.jpg"
+    ],
+    "variants": [
+      {
+        "size": "60-70",
+        "price": 20,
+        "inStock": "true",
+        "imgIndex": 0
+      },
+      {
+        "size": "100-110",
+        "price": 55,
+        "inStock": "true",
+        "imgIndex": 1
+      }
+    ]
+  },
+  {
+    "url": "fatsia-japonica-67",
+    "productType": "plants",
+    "title": "Fats",
+    "realName": "Fatsia Japonica",
+    "latinName": "Glossy-leaf paper plant; Fatsi; Paperplant; Japanese aralia",
+    "details": {
+      "enviroment": "outdoor",
+      "light": "light-shade",
+      "careLevel": "unkillable",
+      "wind": "true",
+      "plantType": "palms-trees"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1675346655/tjmgkgqozahmkgqyvzil.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1617715172/vsz8hzjwhyc89t35nnul.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1617715172/cqf0udzcsq0m5wctir5s.jpg"
+    ],
+    "variants": [
+      {
+        "size": "50-60",
+        "price": 30,
+        "inStock": "true",
+        "imgIndex": 0
+      }
+    ]
+  },
+  {
+    "url": "fargesia-bamboo-138",
+    "productType": "plants",
+    "title": "Boo",
+    "realName": "Fargesia Bamboo",
+    "latinName": "Fargesia Moontears; Umbrella Bamboo",
+    "details": {
+      "enviroment": "outdoor",
+      "light": "direct-sunlight",
+      "careLevel": "unkillable",
+      "wind": "true",
+      "plantType": "climbing"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1689325070/qjgb3mdjknbqyexb37uw.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1689329313/mt18zozzggrzsnmmd3ve.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1689325009/zysr5nr55wws6xvxtr2l.jpg"
+    ],
+    "variants": [
+      {
+        "size": "70-80",
+        "price": 35,
+        "inStock": "true",
+        "imgIndex": 0
+      },
+      {
+        "size": "110-120",
+        "price": 60,
+        "inStock": "true",
+        "imgIndex": 1
+      }
+    ]
+  },
+  {
+    "url": "chamaerops-humilis-69",
+    "productType": "plants",
+    "title": "Mae",
+    "realName": "Chamaerops Humilis",
+    "latinName": "Dwarf fan palm; Mediterranean fan palm; African hair palm; European fan palm; Palm Cabbage",
+    "details": {
+      "enviroment": "outdoor",
+      "light": "light-shade",
+      "careLevel": "unkillable",
+      "wind": "true",
+      "plantType": "climbing"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1689864191/jnlp9j7owe71nmcvvyq5.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1689864535/gjuddvws17wppz36mpd7.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1591270019/lxcw9thniqknysdpdujr.jpg"
+    ],
+    "variants": [
+      {
+        "size": "60-70",
+        "price": 35,
+        "inStock": "true",
+        "imgIndex": 0
+      },
+      {
+        "size": "100-110",
+        "price": 60,
+        "inStock": "false",
+        "imgIndex": 1
+      },
+      {
+        "size": "120-130",
+        "price": 80,
+        "inStock": "true",
+        "imgIndex": 2
+      }
+    ]
+  }
+]

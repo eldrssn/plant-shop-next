@@ -1,13 +1,11 @@
-'use client';
+import { Sorting } from '@/modules/producs/Sorting';
+import { FiltersButtonsMobile } from '@/modules/producs/FiltersButtonsMobile';
+import { Results } from '@/modules/producs/Results';
+import { FilterCategories } from '@/modules/producs/FilterCategories';
+import { getProducts } from '@/lib/products-db';
 
-import { Sorting } from '@/modules/catalog/Sorting';
-import { useWindowSize } from '@/common/hooks/useWindowSize';
-import { FiltersButtonsMobile } from '@/modules/catalog/FiltersButtonsMobile';
-import { Results } from '@/modules/catalog/Results';
-import { FilterCategories } from '@/modules/catalog/FilterCategories';
-
-export default function Page() {
-  const { isTablet } = useWindowSize();
+export default async function Page() {
+  const { products, results } = await getProducts();
 
   return (
     <main>
@@ -15,10 +13,10 @@ export default function Page() {
         <h1 className="text-5xl font-bold text-zinc-800 font-header text-center">
           All Products
         </h1>
-        {!isTablet && <p className="text-center">214 results</p>}
+        <p className="text-center block md:hidden">{results} results</p>
       </div>
 
-      {!isTablet && <FiltersButtonsMobile />}
+      <FiltersButtonsMobile />
 
       <div className="max-w-screen-xl md:px-10 mx-auto w-full flex justify-center gap-4">
         <div className="w-1/4 border h-fit hidden md:block">
@@ -34,11 +32,11 @@ export default function Page() {
 
         <div className="w-full md:w-3/4">
           <div className="justify-between items-center pl-3 pb-3 hidden md:flex">
-            <p className="text-sm text-neutral-500">214 results</p>
+            <p className="text-sm text-neutral-500">{results} results</p>
 
             <Sorting />
           </div>
-          <Results />
+          <Results products={products} />
         </div>
       </div>
     </main>

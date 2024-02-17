@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { FilledActionBox } from '@/components/ui/filled-action-button';
 
-const ActionToCart = ({ id }: { id: number }) => {
+const ActionToCart = ({ id }: { id?: number }) => {
   const ref = useRef<HTMLFormElement & { count: HTMLInputElement }>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
