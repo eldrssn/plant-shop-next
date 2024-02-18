@@ -2,6 +2,7 @@ import { Sorting } from '@/modules/producs/Sorting';
 import { FiltersButtonsMobile } from '@/modules/producs/FiltersButtonsMobile';
 import { Results } from '@/modules/producs/Results';
 import { FilterCategories } from '@/modules/producs/FilterCategories';
+import { ResetButton } from '@/modules/producs/ResetButton';
 import { getProducts } from '@/lib/products-db';
 import { getFilters } from '@/lib/filters-db';
 
@@ -28,9 +29,7 @@ export default async function Page({ searchParams }: Props) {
         <div className="w-1/4 border h-fit hidden md:block">
           <div className="flex justify-between gap-10 items-center px-6 py-4 border-b bg-emerald-200">
             <h3 className="font-bold text-lg">Filter</h3>
-            <button className="underline underline-offset-2" type="button">
-              Reset
-            </button>
+            <ResetButton />
           </div>
 
           <FilterCategories filters={filters} />
