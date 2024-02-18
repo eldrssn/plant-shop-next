@@ -1,20 +1,20 @@
 'use client';
 import { FC, useState } from 'react';
 import { Icon } from '@/components/ui/icons/Icon';
+import { Variant } from '@/models/Filters';
+import { FilterVariant } from './FilterVariant';
 
-type TFilter = {
-  id: string;
-  name: string;
-  value: string;
-  label: string;
-  count: number;
-};
 type TFilterCategory = {
   title: string;
-  filters: TFilter[];
+  slug: string;
+  variants: Variant[];
 };
 
-export const FilterCategory: FC<TFilterCategory> = ({ title, filters }) => {
+export const FilterCategory: FC<TFilterCategory> = ({
+  title,
+  slug: titleSlug,
+  variants,
+}) => {
   const [isOpenList, setIsOpenList] = useState(true);
 
   const toggleList = () => setIsOpenList((isOpenList) => !isOpenList);
@@ -38,22 +38,12 @@ export const FilterCategory: FC<TFilterCategory> = ({ title, filters }) => {
 
       {isOpenList && (
         <ul className="mb-2">
-          {filters.map(({ id, label, name, value }) => (
-            <li key={id} className="">
-              <label
-                htmlFor={id}
-                className="px-6 py-1 flex justify-between items-center text-sm duration-300 transition-colors hover:text-teal-700 cursor-pointer"
-              >
-                {label}
-                <input
-                  id={id}
-                  type="checkbox"
-                  name={name}
-                  value={value}
-                  className="cursor-pointer "
-                />
-              </label>
-            </li>
+          {variants.map((variant) => (
+            <FilterVariant
+              variant={variant}
+              titleSlug={titleSlug}
+              key={variant.slug}
+            />
           ))}
         </ul>
       )}

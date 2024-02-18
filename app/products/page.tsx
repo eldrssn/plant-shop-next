@@ -3,9 +3,15 @@ import { FiltersButtonsMobile } from '@/modules/producs/FiltersButtonsMobile';
 import { Results } from '@/modules/producs/Results';
 import { FilterCategories } from '@/modules/producs/FilterCategories';
 import { getProducts } from '@/lib/products-db';
+import { getFilters } from '@/lib/filters-db';
 
-export default async function Page() {
-  const { products, results } = await getProducts();
+type Props = {
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export default async function Page({ searchParams }: Props) {
+  const { products, results } = await getProducts({});
+  const { filters } = await getFilters();
 
   return (
     <main>
@@ -16,7 +22,7 @@ export default async function Page() {
         <p className="text-center block md:hidden">{results} results</p>
       </div>
 
-      <FiltersButtonsMobile />
+      <FiltersButtonsMobile filters={filters} />
 
       <div className="max-w-screen-xl md:px-10 mx-auto w-full flex justify-center gap-4">
         <div className="w-1/4 border h-fit hidden md:block">
@@ -27,7 +33,7 @@ export default async function Page() {
             </button>
           </div>
 
-          <FilterCategories />
+          <FilterCategories filters={filters} />
         </div>
 
         <div className="w-full md:w-3/4">

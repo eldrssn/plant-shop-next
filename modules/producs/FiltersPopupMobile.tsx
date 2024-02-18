@@ -9,15 +9,18 @@ import { WithTransition } from '@/common/hocs/WithTransition';
 
 import { FilterCategories } from './FilterCategories';
 import { defaultStyle, transitionStyles } from './animation';
+import { Filter } from '@/models/Filters';
 
 type TFiltersPopupMobile = {
   closeFilters: () => void;
   isOpen: boolean;
+  filters: Filter[];
 };
 
 export const FiltersPopupMobile: FC<TFiltersPopupMobile> = ({
   closeFilters,
   isOpen,
+  filters,
 }) => {
   useBodyOverflow(isOpen);
 
@@ -39,7 +42,7 @@ export const FiltersPopupMobile: FC<TFiltersPopupMobile> = ({
           </button>
         </div>
 
-        <FilterCategories />
+        <FilterCategories filters={filters} />
 
         <div className="fixed bottom-0 left-0 right-0 flex bg-white">
           <OutlinedLink onClick={closeFilters} className="basis-1/2">

@@ -1,0 +1,138 @@
+[
+  {
+    "productType": "plants",
+    "fiters": [
+      {
+        "title": "Light",
+        "slug": "light",
+        "variants": [
+          {
+            "title": "Happiest in direct sunlight",
+            "slug": "direct-sunlight"
+          },
+          {
+            "title": "Happy in light and shade",
+            "slug": "light-shade"
+          },
+          {
+            "title": "Happy in shade",
+            "slug": "shade"
+          }
+        ]
+      },
+      {
+        "title": "Care Level",
+        "slug": "care-level",
+        "variants": [
+          {
+            "title": "Easy to care for",
+            "slug": "easy"
+          },
+          {
+            "title": "Almost un-killable",
+            "slug": "unkillable"
+          },
+          {
+            "title": "Needs some love",
+            "slug": "meduim"
+          }
+        ]
+      },
+      {
+        "title": "Wind",
+        "slug": "wind",
+        "variants": [
+          {
+            "title": "Can handle wind",
+            "slug": "true"
+          },
+          {
+            "title": "Can't handle wind",
+            "slug": "false"
+          }
+        ]
+      },
+      {
+        "title": "Plant type",
+        "slug": "plant-type",
+        "variants": [
+          {
+            "title": "Flowering",
+            "slug": "flowering"
+          },
+          {
+            "title": "Ferns",
+            "slug": "ferns"
+          },
+          {
+            "title": "Palms & trees",
+            "slug": "palms-trees"
+          },
+          {
+            "title": "Hanging & climbing",
+            "slug": "climbing"
+          },
+          {
+            "title": "Edibles",
+            "slug": "falediblesse"
+          },
+          {
+            "title": "Bamboo & grasses",
+            "slug": "bamboo-grasses"
+          }
+        ]
+      },
+      {
+        "title": "Plant height",
+        "slug": "height",
+        "variants": [
+          {
+            "title": "Tiny / 0-15cm",
+            "slug": "xs"
+          },
+          {
+            "title": "Small / 15-50cm",
+            "slug": "sm"
+          },
+          {
+            "title": "Medium / 50cm - 1m",
+            "slug": "md"
+          },
+          {
+            "title": "Tall / > 1m",
+            "slug": "lg"
+          }
+        ]
+      },
+      {
+        "title": "Environment",
+        "slug": "env",
+        "variants": [
+          {
+            "title": "Indoor",
+            "slug": "indoor"
+          },
+          {
+            "title": "Outdoor",
+            "slug": "outdoor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "productType": "all",
+    "filters": [
+      {
+        "title": "New in",
+        "slug": "new",
+        "variants": [
+          {
+            "title": "New in",
+            "slug": "true"
+          }
+        ]
+      }
+    ]
+  }
+]

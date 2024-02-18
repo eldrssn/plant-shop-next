@@ -1,21 +1,22 @@
 'use client';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
 import { Icon } from '@/components/ui/icons/Icon';
 import { Sorting } from './Sorting';
 import { FiltersPopupMobile } from './FiltersPopupMobile';
-import { useWindowSize } from '@/common/hooks/useWindowSize';
+import { Filter } from '@/models/Filters';
 
-export const FiltersButtonsMobile = () => {
-  // const { isTablet } = useWindowSize();
+type FiltersButtonsMobileProps = {
+  filters: Filter[];
+};
+
+export const FiltersButtonsMobile: FC<FiltersButtonsMobileProps> = ({
+  filters,
+}) => {
   const [isOpenFilters, setIsOpenFilters] = useState(false);
 
   const toggleFilters = () =>
     setIsOpenFilters((isOpenFilters) => !isOpenFilters);
-
-  // if (isTablet) {
-  //   return <></>;
-  // }
 
   return (
     <>
@@ -32,7 +33,11 @@ export const FiltersButtonsMobile = () => {
         <Sorting />
       </div>
 
-      <FiltersPopupMobile closeFilters={toggleFilters} isOpen={isOpenFilters} />
+      <FiltersPopupMobile
+        closeFilters={toggleFilters}
+        isOpen={isOpenFilters}
+        filters={filters}
+      />
     </>
   );
 };

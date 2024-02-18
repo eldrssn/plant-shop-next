@@ -1,11 +1,16 @@
-'use client';
+import { Filter } from '@/models/Filters';
 import { FilterCategory } from './FilterCategory';
 import { filtersArray } from '@/content/filters';
+import { FC } from 'react';
 
-export const FilterCategories = () => (
+type FilterCategoriesProps = {
+  filters: Filter[];
+};
+
+export const FilterCategories: FC<FilterCategoriesProps> = ({ filters }) => (
   <div className="mb-20">
-    {filtersArray.map((filter) => (
-      <FilterCategory key={filter.title} {...filter} />
+    {filters.map((filter) => (
+      <FilterCategory key={filter.slug} {...filter} />
     ))}
   </div>
 );
