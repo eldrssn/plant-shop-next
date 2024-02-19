@@ -10,6 +10,7 @@ export const ItemInfo: FC<Product> = ({
   realName,
 }) => {
   const [choosenVariantIndex, setChoosenVariantIndex] = useState(0);
+
   return (
     <div className="text-zinc-800 px-6 flex flex-col md:basis-1/2">
       <h1 className="text-4xl font-bold font-header mb-4 md:text-6xl">
@@ -28,10 +29,10 @@ export const ItemInfo: FC<Product> = ({
                   border-zinc-800 cursor-pointer ${
                     i === choosenVariantIndex ? 'bg-zinc-800 text-white' : ''
                   }`}
-              key={size}
+              key={size.toString()}
               onClick={() => setChoosenVariantIndex(i)}
             >
-              {size}
+              {size.join('-')}
             </li>
           ))}
         </ul>

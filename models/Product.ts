@@ -1,7 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 
 type ProductVariant = {
-  size: string;
+  size: number[];
   price: number;
   inStock: boolean;
   imgIndex: number;
