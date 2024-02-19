@@ -11,7 +11,7 @@ type Props = {
 };
 
 export default async function Page({ searchParams }: Props) {
-  const { products, results } = await getProducts({});
+  const { products, results } = await getProducts(searchParams);
   const { filters } = await getFilters();
 
   return (
