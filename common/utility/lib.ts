@@ -1,4 +1,9 @@
-import { plantSizeRanges, potSizeRanges } from '../constants/lib';
+import {
+  ORDERS,
+  ORDER_KEY,
+  PLANT_SIZE_RANGES,
+  POT_SIZE_RANGES,
+} from '../constants/lib';
 import {
   FeatureKeysGenerator,
   ResultType,
@@ -10,7 +15,7 @@ const toArray = (value: string | string[]) =>
 
 export const generateHeightFilter = (value: string[]) =>
   value.map((el) => {
-    const range = plantSizeRanges[el];
+    const range = PLANT_SIZE_RANGES[el];
     return {
       productType: 'plants',
       'variants.size': { $elemMatch: { $gte: range.$gte, $lt: range.$lt } },
@@ -21,8 +26,8 @@ export const generatePotSizeFilter = (value: string[]) =>
   value.map((el) => ({
     productType: 'pots',
     'variants.size': {
-      $gte: potSizeRanges[el].$gte,
-      $lt: potSizeRanges[el].$lt,
+      $gte: POT_SIZE_RANGES[el].$gte,
+      $lt: POT_SIZE_RANGES[el].$lt,
     },
   }));
 
@@ -53,12 +58,18 @@ const transformValue = (key: string, value?: string | string[]) => {
 const getFilterKey = (key: string) =>
   featureKeysGenerator[key] ? '$or' : `details.${key}`;
 
-export const transformObject = (obj: SearchParamsProps) => {
+export const getFilters = (obj: SearchParamsProps) => {
   const result: ResultType = {};
 
   for (const key in obj) {
-    result[getFilterKey(key)] = transformValue(key, obj[key]);
+    if (key !== ORDER_KEY) {
+      result[getFilterKey(key)] = transformValue(key, obj[key]);
+    }
   }
 
   return result;
+};
+
+export const getOrder = (key?: string | string[]) => {
+  return key && !Array.isArray(key) ? ORDERS[key] : {};
 };

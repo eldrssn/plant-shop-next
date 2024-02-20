@@ -1,21 +1,20 @@
 import ProductModel from '@/models/Product';
 import connectDB from './connect-db';
-import { transformObject } from '@/common/utility/lib';
+import { getFilters, getOrder } from '@/common/utility/lib';
 import { SearchParamsProps } from '@/common/types/lib';
 
 export async function getProducts(searchParams: SearchParamsProps = {}) {
   try {
     await connectDB();
 
-    const products = await ProductModel.find(transformObject(searchParams))
+    const products = await ProductModel.find(getFilters(searchParams))
+      .sort(getOrder(searchParams?.order))
       .lean()
       .exec();
 
-    const results = products.length;
-
     return {
       products: JSON.parse(JSON.stringify(products)),
-      results,
+      results: products.length,
     };
   } catch (error) {
     return { error };

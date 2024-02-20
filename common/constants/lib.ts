@@ -1,13 +1,20 @@
-import { TSizeRanges } from '../types/lib';
+import { Orders, TSizeRanges } from '../types/lib';
 
-export const plantSizeRanges: TSizeRanges = {
+export const ORDER_KEY = 'order';
+
+export const ORDERS: Orders = {
+  'price:asc': { 'variants.0.price': 1 },
+  'price:desc': { 'variants.0.price': -1 },
+};
+
+export const PLANT_SIZE_RANGES: TSizeRanges = {
   lg: { $gte: 100, $lt: 500 },
   md: { $gte: 50, $lt: 100 },
   sm: { $gte: 15, $lt: 50 },
   xs: { $gte: 0, $lt: 15 },
 };
 
-export const potSizeRanges: TSizeRanges = {
+export const POT_SIZE_RANGES: TSizeRanges = {
   'pot-xxxl': { $gte: 40, $lt: 500 },
   'pot-xxl': { $gte: 30, $lt: 40 },
   'pot-xl': { $gte: 25, $lt: 30 },

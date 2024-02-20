@@ -1,3 +1,5 @@
+import { SortOrder } from 'mongoose';
+
 export type TSizeRanges = Record<string, Record<string, number>>;
 
 export type FilterGenerator<T> = (value: string[]) => T;
@@ -59,3 +61,4 @@ export type FeatureKeysGenerator = {
   [key: string]: FilterTypes;
 };
 
+export type Orders = Record<string, Record<string, SortOrder>>;
