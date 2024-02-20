@@ -1,40 +1,64 @@
-import { heightRanges } from '../constants/lib';
-import { ResultType, SearchParamsProps } from '../types/lib';
+import { plantSizeRanges, potSizeRanges } from '../constants/lib';
+import {
+  FeatureKeysGenerator,
+  ResultType,
+  SearchParamsProps,
+} from '../types/lib';
 
-const isHeightFilter = (key: string) => key.toLowerCase() === 'height';
+const toArray = (value: string | string[]) =>
+  Array.isArray(value) ? value : [value];
 
-export function generateHeightFilter(heightFilters: string | string[]) {
-  const filters = Array.isArray(heightFilters)
-    ? heightFilters
-    : [heightFilters];
-
-  return filters.map((size) => {
-    const range = heightRanges[size];
+export const generateHeightFilter = (value: string[]) =>
+  value.map((el) => {
+    const range = plantSizeRanges[el];
     return {
+      productType: 'plants',
       'variants.size': { $elemMatch: { $gte: range.$gte, $lt: range.$lt } },
     };
   });
-}
 
-function transformValue(key: string, value?: string | string[]) {
-  if (isHeightFilter(key) && value) {
-    return generateHeightFilter(value);
+export const generatePotSizeFilter = (value: string[]) =>
+  value.map((el) => ({
+    productType: 'pots',
+    'variants.size': {
+      $gte: potSizeRanges[el].$gte,
+      $lt: potSizeRanges[el].$lt,
+    },
+  }));
+
+export const generateColorFilter = (value: string[]) =>
+  value.map((el) => ({
+    'variants.color': { $elemMatch: { name: el } },
+  }));
+
+export const generateProductTypeFilter = (value: string[]) =>
+  value.map((el) => ({ productType: el }));
+
+const featureKeysGenerator: FeatureKeysGenerator = {
+  height: generateHeightFilter,
+  color: generateColorFilter,
+  potSize: generatePotSizeFilter,
+  type: generateProductTypeFilter,
+};
+
+const transformValue = (key: string, value?: string | string[]) => {
+  if (featureKeysGenerator[key] && value !== undefined) {
+    const filters = toArray(value);
+    return featureKeysGenerator[key](filters);
   }
 
-  if (Array.isArray(value)) {
-    return { $in: value };
-  } else {
-    return value;
-  }
-}
+  return Array.isArray(value) ? { $in: value } : value;
+};
 
-export function transformObject(obj: SearchParamsProps) {
+const getFilterKey = (key: string) =>
+  featureKeysGenerator[key] ? '$or' : `details.${key}`;
+
+export const transformObject = (obj: SearchParamsProps) => {
   const result: ResultType = {};
 
   for (const key in obj) {
-    const transformedValue = transformValue(key, obj[key]);
-    result[isHeightFilter(key) ? '$or' : `details.${key}`] = transformedValue;
+    result[getFilterKey(key)] = transformValue(key, obj[key]);
   }
 
   return result;
-}
+};

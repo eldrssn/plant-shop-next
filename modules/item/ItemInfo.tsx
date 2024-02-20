@@ -29,10 +29,10 @@ export const ItemInfo: FC<Product> = ({
                   border-zinc-800 cursor-pointer ${
                     i === choosenVariantIndex ? 'bg-zinc-800 text-white' : ''
                   }`}
-              key={size.toString()}
+              key={i}
               onClick={() => setChoosenVariantIndex(i)}
             >
-              {size.join('-')}
+              {Array.isArray(size) ? size.join('-') : size}
             </li>
           ))}
         </ul>

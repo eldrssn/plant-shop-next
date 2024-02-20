@@ -1,7 +1,7 @@
 [
   {
     "productType": "plants",
-    "fiters": [
+    "filters": [
       {
         "title": "Light",
         "slug": "light",
@@ -22,7 +22,7 @@
       },
       {
         "title": "Care Level",
-        "slug": "care-level",
+        "slug": "careLevel",
         "variants": [
           {
             "title": "Easy to care for",
@@ -34,7 +34,7 @@
           },
           {
             "title": "Needs some love",
-            "slug": "meduim"
+            "slug": "medium"
           }
         ]
       },
@@ -54,7 +54,7 @@
       },
       {
         "title": "Plant type",
-        "slug": "plant-type",
+        "slug": "plantType",
         "variants": [
           {
             "title": "Flowering",
@@ -103,10 +103,15 @@
             "slug": "lg"
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "productType": "all",
+    "filters": [
       {
         "title": "Environment",
-        "slug": "env",
+        "slug": "enviroment",
         "variants": [
           {
             "title": "Indoor",
@@ -117,19 +122,115 @@
             "slug": "outdoor"
           }
         ]
-      }
-    ]
-  },
-  {
-    "productType": "all",
-    "filters": [
+      },
       {
         "title": "New in",
         "slug": "new",
         "variants": [
           {
             "title": "New in",
-            "slug": "true"
+            "slug": "new"
+          }
+        ]
+      },
+      {
+        "title": "Product Type",
+        "slug": "type",
+        "variants": [
+          {
+            "title": "Plants",
+            "slug": "plants"
+          },
+          {
+            "title": "Pots",
+            "slug": "pots"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "productType": "pots",
+    "filters": [
+      {
+        "title": "Pot Color",
+        "slug": "color",
+        "variants": [
+          {
+            "title": "Black",
+            "slug": "Black"
+          },
+          {
+            "title": "Stone",
+            "slug": "Stone"
+          },
+          {
+            "title": "Blue",
+            "slug": "Blue"
+          },
+          {
+            "title": "Green",
+            "slug": "Green"
+          },
+          {
+            "title": "Grey",
+            "slug": "Grey"
+          },
+          {
+            "title": "Pink",
+            "slug": "Pink"
+          }
+        ]
+      },
+      {
+        "title": "Pot Material",
+        "slug": "material",
+        "variants": [
+          {
+            "title": "Clay",
+            "slug": "Clay"
+          },
+          {
+            "title": "Ceramic",
+            "slug": "Ceramic"
+          },
+          {
+            "title": "Sandstone",
+            "slug": "Sandstone"
+          }
+        ]
+      },
+      {
+        "title": "Pot Size",
+        "slug": "potSize",
+        "variants": [
+          {
+            "title": "XS (0-10cm)",
+            "slug": "pot-xs"
+          },
+          {
+            "title": "S (10-15cm)",
+            "slug": "pot-s"
+          },
+          {
+            "title": "M (15-20cm)",
+            "slug": "pot-m"
+          },
+          {
+            "title": "L (20-25cm)",
+            "slug": "pot-l"
+          },
+          {
+            "title": "XL (25-30cm)",
+            "slug": "pot-xl"
+          },
+          {
+            "title": "XXL (30-40cm)",
+            "slug": "pot-xxl"
+          },
+          {
+            "title": "XXXL (40cm+)",
+            "slug": "pot-xxxl"
           }
         ]
       }

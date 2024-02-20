@@ -45,7 +45,7 @@ const ProductSchema = new Schema<Product>(
     imgs: [String],
     variants: [
       {
-        size: String,
+        size: [Number],
         price: Number,
         inStock: Boolean,
         imgIndex: Number,
