@@ -1,10 +1,13 @@
 import mongoose, { Schema } from 'mongoose';
 
+export type ColorsVarians = Record<string, string>[];
+
 type ProductVariant = {
   size: number[];
   price: number;
   inStock: boolean;
   imgIndex: number;
+  color?: ColorsVarians;
 };
 
 type ProductDetails = {

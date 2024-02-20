@@ -2,37 +2,11 @@
 
 import { FC } from 'react';
 import Image from 'next/image';
-import { TItem } from '@/common/types';
-import { LinkToOptions } from '../carousel/LinkToOptions';
-import { ActionToCart } from '../carousel/ActionToCart';
 import Link from 'next/link';
 
-type ProductVariant = {
-  size: string;
-  price: number;
-  inStock: boolean;
-  imgIndex: number;
-};
-
-type ProductDetails = {
-  enviroment: string;
-  light: string;
-  careLevel: string;
-  wind: boolean;
-  plantType: string;
-};
-
-type Product = {
-  _id: string;
-  url: string;
-  productType: string;
-  title: string;
-  realName: string;
-  latinName: string;
-  details: ProductDetails;
-  imgs: string[];
-  variants: ProductVariant[];
-};
+import { LinkToOptions } from '../carousel/LinkToOptions';
+import { ActionToCart } from '../carousel/ActionToCart';
+import { Product } from '@/models/Product';
 
 const ProductItem: FC<Product> = ({ url, imgs, realName, title, variants }) => (
   <article className="px-3 bg-transparent">

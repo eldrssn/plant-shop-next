@@ -1,7 +1,9 @@
 'use client';
+import React, { FC, useState } from 'react';
+
 import { FilledActionBox } from '@/components/ui/filled-action-button';
 import { Product } from '@/models/Product';
-import React, { FC, useState } from 'react';
+import { PotsColor } from './PotsColor';
 
 export const ItemInfo: FC<Product> = ({
   title,
@@ -22,11 +24,11 @@ export const ItemInfo: FC<Product> = ({
 
       <div className="flex flex-col gap-3">
         <p className="font-bold">Choose plant height (cm)</p>
-        <ul className="flex gap-2 mb-8">
+        <ul className="flex gap-2 mb-8 flex-wrap">
           {variants.map(({ size }, i) => (
             <li
-              className={`text-sm px-4 py-3 border font-bold transition-colors
-                  border-zinc-800 cursor-pointer ${
+              className={`text-sm px-5 py-3 border font-bold transition-colors
+                  border-zinc-800 cursor-pointer w-24 text-center ${
                     i === choosenVariantIndex ? 'bg-zinc-800 text-white' : ''
                   }`}
               key={i}
@@ -37,6 +39,8 @@ export const ItemInfo: FC<Product> = ({
           ))}
         </ul>
       </div>
+
+      <PotsColor color={variants[choosenVariantIndex].color} />
 
       <p className="font-bold text-sm mb-2">{realName}</p>
       <p className="text-neutral-500 text-sm mb-2">{latinName}</p>
