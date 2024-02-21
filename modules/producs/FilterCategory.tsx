@@ -1,5 +1,5 @@
 'use client';
-import { FC, useState } from 'react';
+import { FC, Suspense, useState } from 'react';
 import { Icon } from '@/components/ui/icons/Icon';
 import { Variant } from '@/models/Filters';
 import { FilterVariant } from './FilterVariant';
@@ -39,11 +39,9 @@ export const FilterCategory: FC<TFilterCategory> = ({
       {isOpenList && (
         <ul className="mb-2">
           {variants.map((variant) => (
-            <FilterVariant
-              variant={variant}
-              titleSlug={titleSlug}
-              key={variant.slug}
-            />
+            <Suspense key={variant.slug}>
+              <FilterVariant variant={variant} titleSlug={titleSlug} />
+            </Suspense>
           ))}
         </ul>
       )}

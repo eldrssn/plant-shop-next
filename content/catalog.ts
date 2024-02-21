@@ -5,94 +5,133 @@ export const catalog: TMenuItem[] = [
     title: 'Plants',
     type: 'main',
     picture: '/pictures/uyqprhxwdxligxwedzlo.webp',
+    href: '/products?type=plants',
     children: [
-      { title: 'All plants' },
+      { title: 'All plants', href: '/products?type=plants' },
       {
         title: 'Indoor plants',
+        href: '/products?type=plants&enviroment=indoor',
         children: [
           {
             title: 'Height',
             children: [
-              { title: 'Tiny' },
-              { title: 'Small' },
-              { title: 'Medium' },
-              { title: 'Tall' },
+              {
+                title: 'Tiny',
+                href: '/products?type=plants&enviroment=indoor&height=xs',
+              },
+              {
+                title: 'Small',
+                href: '/products?type=plants&enviroment=indoor&height=sm',
+              },
+              {
+                title: 'Medium',
+                href: '/products?type=plants&enviroment=indoor&height=md',
+              },
+              {
+                title: 'Tall',
+                href: '/products?type=plants&enviroment=indoor&height=lg',
+              },
             ],
           },
           {
             title: 'Plant type',
             children: [
-              { title: 'Hanging' },
-              { title: 'Patterned or colourful' },
-              { title: 'Succulents & cacti' },
-              { title: 'Fern' },
-              { title: 'Palms' },
-              { title: 'Flowering' },
+              {
+                title: 'Hanging',
+                href: '/products?type=plants&enviroment=indoor&plantType=climbing',
+              },
+              // { title: 'Patterned or colourful', href: '' },
+              // { title: 'Succulents & cacti', href: '' },
+              {
+                title: 'Fern',
+                href: '/products?type=plants&enviroment=indoor&plantType=ferns',
+              },
+              {
+                title: 'Palms',
+                href: '/products?type=plants&enviroment=indoor&plantType=palms-trees',
+              },
+              {
+                title: 'Flowering',
+                href: '/products?type=plants&enviroment=indoor&plantType=flowering',
+              },
             ],
+          },
+
+          // { title: 'Most popular' },
+          {
+            title: 'Unkillables',
+            href: '/products?type=plants&enviroment=indoor&careLevel=unkillable',
           },
           {
-            title: 'Room',
-            children: [
-              { title: 'Bedroom' },
-              { title: 'Bathroom' },
-              { title: 'Living room' },
-              { title: 'Kitchen' },
-              { title: 'Study' },
-              { title: 'Corridor' },
-            ],
+            title: 'Shade lovers',
+            href: '/products?type=plants&enviroment=indoor&light=shade',
           },
-          { title: 'Most popular' },
-          { title: 'Unkillables' },
-          { title: 'Shade lovers' },
         ],
       },
       {
         title: 'Outdoor plants',
+        href: '/products?type=plants&enviroment=outdoor',
         children: [
           {
             title: 'Conditions',
             children: [
-              { title: 'Sunny spot' },
-              { title: 'Shady spot' },
-              { title: 'Windy spot' },
-            ],
-          },
-          {
-            title: 'Outdoor space',
-            children: [
-              { title: 'Balcony' },
-              { title: 'Windowsill' },
-              { title: 'Patio & deck' },
-              { title: 'Garden' },
-              { title: 'Doorstep' },
+              {
+                title: 'Sunny spot',
+                href: '/products?type=plants&enviroment=outdoor&light=direct-sunlight',
+              },
+              {
+                title: 'Shady spot',
+                href: '/products?type=plants&enviroment=outdoor&light=shade',
+              },
+              {
+                title: 'Windy spot',
+                href: '/products?type=plants&enviroment=outdoor&wind=true',
+              },
             ],
           },
           {
             title: 'Plant type',
             children: [
-              { title: 'Palms & trees' },
-              { title: 'Ferns' },
-              { title: 'Climbing' },
-              { title: 'Bamboo & grasses' },
-              { title: 'Flowering' },
+              {
+                title: 'Palms & trees',
+                href: '/products?type=plants&enviroment=outdoor&plantType=palms-trees',
+              },
+              {
+                title: 'Ferns',
+                href: '/products?type=plants&enviroment=outdoor&plantType=ferns',
+              },
+              {
+                title: 'Climbing',
+                href: '/products?type=plants&enviroment=outdoor&plantType=climbing',
+              },
+              {
+                title: 'Bamboo & grasses',
+                href: '/products?type=plants&enviroment=outdoor&plantType=bamboo-grasses',
+              },
+              {
+                title: 'Flowering',
+                href: '/products?type=plants&enviroment=outdoor&plantType=flowering',
+              },
+              {
+                title: 'Edibles',
+                href: '/products?type=plants&enviroment=outdoor&plantType=edibles',
+              },
             ],
           },
-          { title: 'What to plant now' },
         ],
       },
-      { title: 'New in' },
-      { title: 'Plant bundles' },
-      { title: 'Seed & bulbs' },
+      { title: 'New in', href: '/products?type=plants&new=new' },
     ],
   },
   {
     title: 'Pots',
     type: 'main',
     picture: '/pictures/noovqiilppwn6v3iyfbt.webp',
+    href: '/products?type=pots',
     children: [
-      { title: 'All pots' },
-      { title: 'Indoor pots' },
-      { title: 'Outdoor pots' },
+      { title: 'All pots', href: '/products?type=pots' },
+      { title: 'Indoor pots', href: '/products?type=pots&enviroment=indoor' },
+      { title: 'Outdoor pots', href: '/products?type=pots&enviroment=outdoor' },
     ],
   },
   {

@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import Link from 'next/link';
 
 import { TMenuItem } from '@/components/main/header/types';
 
@@ -12,7 +13,7 @@ const SubMenuItem: FC<TSubMenuItem> = ({ submenu }) => {
     return null;
   }
 
-  const { title, children } = submenu;
+  const { title, children, href } = submenu;
   const showSubMenu = (children?: TMenuItem[]) => () => {
     if (children?.length) {
       setMenu(children);
@@ -27,9 +28,16 @@ const SubMenuItem: FC<TSubMenuItem> = ({ submenu }) => {
       onMouseEnter={showSubMenu(children)}
       onMouseLeave={closeSubMenu}
       key={title}
-      className="relative flex flex-row justify-between py-1 cursor-pointer"
+      className="relative flex flex-row justify-between py-1"
     >
-      <p className="text-md">{title}</p>
+      {href ? (
+        <Link href={href} className="text-md">
+          {title}
+        </Link>
+      ) : (
+        <p className="text-md">{title}</p>
+      )}
+
       {children?.length && (
         <span className='absolute content-[""] border-t border-t-black border-r border-r-black rotate-45 top-[14px] right-8 w-[8px] h-[8px]' />
       )}

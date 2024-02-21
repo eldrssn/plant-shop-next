@@ -28,7 +28,7 @@ export const ItemInfo: FC<Product> = ({
           {variants.map(({ size }, i) => (
             <li
               className={`text-sm px-5 py-3 border font-bold transition-colors
-                  border-zinc-800 cursor-pointer w-24 text-center ${
+                  border-zinc-800 cursor-pointer w-28 text-center ${
                     i === choosenVariantIndex ? 'bg-zinc-800 text-white' : ''
                   }`}
               key={i}

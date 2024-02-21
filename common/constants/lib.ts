@@ -5,6 +5,7 @@ export const ORDER_KEY = 'order';
 export const ORDERS: Orders = {
   'price:asc': { 'variants.0.price': 1 },
   'price:desc': { 'variants.0.price': -1 },
+  'created:desc': { 'details.new': -1 },
 };
 
 export const PLANT_SIZE_RANGES: TSizeRanges = {

@@ -49,7 +49,7 @@ export const FilterVariant: FC<TFilterVariant> = ({
           type="checkbox"
           name={slug}
           className="cursor-pointer"
-          checked={searchParams.has(titleSlug, slug)}
+          checked={searchParams.get(titleSlug) === slug}
           onChange={handleChange}
         />
       </label>

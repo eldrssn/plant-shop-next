@@ -10,7 +10,7 @@ const optionsArray = [
   // TODO: next step
   // { title: 'Sort by: Recommended', value: 'rank:desc' },
   // { title: 'Sort by: Most popular', value: 'popularity:desc' },
-  // { title: 'Sort by: Newest', value: 'created:desc' },
+  { title: 'Sort by: Newest', value: 'created:desc' },
 ];
 
 export const Sorting = () => {

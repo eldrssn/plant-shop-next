@@ -3,4 +3,5 @@ export type TMenuItem = {
   children?: TMenuItem[];
   type?: string;
   picture?: string;
+  href?: string;
 };

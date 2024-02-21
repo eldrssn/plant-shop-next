@@ -1,14 +1,19 @@
-import Filters, { Filter } from '@/models/Filters';
+import Filters from '@/models/Filters';
 import connectDB from './connect-db';
+import { SearchParamsProps } from '@/common/types/lib';
+import { getFiltersForFilters } from '@/common/utility/lib';
 
-export async function getFilters() {
+export async function getFiltersList(searchParams: SearchParamsProps = {}) {
   try {
     await connectDB();
-
-    const filters = await Filters.find({}).lean().exec();
+    const filters = await Filters.find(getFiltersForFilters(searchParams?.type))
+      .lean()
+      .exec();
 
     return {
-      filters: JSON.parse(JSON.stringify(filters)).flatMap((el) => el.filters),
+      filters: JSON.parse(JSON.stringify(filters)).flatMap(
+        (el: any) => el.filters
+      ),
     };
   } catch (error) {
     return { error };

@@ -1,5 +1,5 @@
 'use client';
-import { FC, useState } from 'react';
+import { FC, Suspense, useState } from 'react';
 
 import { Icon } from '@/components/ui/icons/Icon';
 import { Sorting } from './Sorting';
@@ -30,7 +30,9 @@ export const FiltersButtonsMobile: FC<FiltersButtonsMobileProps> = ({
           <Icon svgId="icon-filter-arrow-down" width="16" height="16" />
         </button>
 
-        <Sorting />
+        <Suspense>
+          <Sorting />
+        </Suspense>
       </div>
 
       <FiltersPopupMobile

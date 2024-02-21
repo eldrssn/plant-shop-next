@@ -1,3 +1,4 @@
+import { SearchParamsProps } from '@/common/types/lib';
 import connectDB from '@/lib/connect-db';
 import { getProducts } from '@/lib/products-db';
 
@@ -6,6 +7,8 @@ import { getProducts } from '@/lib/products-db';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams;
+
   try {
     await connectDB();
 
@@ -18,7 +21,9 @@ export async function GET(request: NextRequest) {
     // const limit = limit_str ? parseInt(limit_str, 10) : 10;
 
     // const { plants, results, error } = await getPlants({ page, limit });
-    const { products, results, error } = await getProducts();
+    const { products, results, error } = await getProducts(
+      (searchParams as unknown as SearchParamsProps) || {}
+    );
 
     if (error) {
       throw error;

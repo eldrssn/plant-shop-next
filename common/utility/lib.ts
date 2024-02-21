@@ -73,3 +73,15 @@ export const getFilters = (obj: SearchParamsProps) => {
 export const getOrder = (key?: string | string[]) => {
   return key && !Array.isArray(key) ? ORDERS[key] : {};
 };
+
+//TODO: rename
+export const getFiltersForFilters = (value?: string | string[]) => {
+  if (!value) {
+    return {};
+  }
+  const result = { $or: [{ productType: 'all' }] };
+  const filters = toArray(value);
+  filters.map((el) => result['$or'].push({ productType: el }));
+
+  return result;
+};
