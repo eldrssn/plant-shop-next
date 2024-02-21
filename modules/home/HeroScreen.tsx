@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { OutlinedActionButton } from '@/components/ui/outlined-action-button';
+import { PRODUCTS_SLUG } from '@/common/constants';
 
 const HeroScreen = () => (
   <section className="bg-stone-200">
@@ -27,8 +28,16 @@ const HeroScreen = () => (
           </p>
 
           <div className="flex flex-col gap-y-4">
-            <OutlinedActionButton>Shop indoor plants</OutlinedActionButton>
-            <OutlinedActionButton>Shop outdoor plants</OutlinedActionButton>
+            <OutlinedActionButton
+              href={`/${PRODUCTS_SLUG}?type=plants&enviroment=indoor`}
+            >
+              Shop indoor plants
+            </OutlinedActionButton>
+            <OutlinedActionButton
+              href={`/${PRODUCTS_SLUG}?type=plants&enviroment=outdoor`}
+            >
+              Shop outdoor plants
+            </OutlinedActionButton>
           </div>
         </div>
       </div>

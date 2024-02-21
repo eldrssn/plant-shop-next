@@ -10,7 +10,7 @@ const AdItem: FC<TAdItem> = ({
   title,
   description,
   buttonText,
-  href,
+  buttonHref,
   image,
   position,
 }) => (
@@ -35,7 +35,7 @@ const AdItem: FC<TAdItem> = ({
         </h3>
         <p className="mb-8">{description}</p>
 
-        <FilledActionBox href={href}>{buttonText}</FilledActionBox>
+        <FilledActionBox href={buttonHref}>{buttonText}</FilledActionBox>
       </div>
     </div>
   </article>

@@ -1,9 +1,10 @@
 'use client';
 
 import React, { FC, FormEvent, useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 import { Icon } from '@/components/ui/icons/Icon';
-import { useRouter } from 'next/navigation';
+import { PRODUCTS_SLUG } from '@/common/constants';
 
 type SearchInputProps = {
   isOpen: boolean;
@@ -22,7 +23,7 @@ export const SearchInput: FC<SearchInputProps> = ({ isOpen }) => {
   const handleSumbit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setQuery('');
-    replace(`/products?${'search'}=${query}`);
+    replace(`/${PRODUCTS_SLUG}?${'search'}=${query}`);
   };
 
   return (

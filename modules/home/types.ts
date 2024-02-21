@@ -10,7 +10,7 @@ export type TAdItem = {
   title: string;
   description: string;
   buttonText: string;
-  href?: string;
+  buttonHref?: string;
   image: string;
   position: OfferPositions;
   id: number;
