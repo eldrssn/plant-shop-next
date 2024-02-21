@@ -1,22 +1,18 @@
 export const popularSearchLinks = [
   {
     title: 'Indoor Plants',
-    href: '#',
-    amount: 68,
-  },
-  {
-    title: 'Outdoor Plants',
-    href: '#',
-    amount: 52,
+    href: '/products?type=plants&enviroment=indoor',
   },
   {
     title: 'Indoor Pots',
-    href: '#',
-    amount: 26,
+    href: '/products?type=pots&enviroment=indoor',
+  },
+  {
+    title: 'Outdoor Plants',
+    href: '/products?type=plants&enviroment=outdoor',
   },
   {
     title: 'Outdoor Pots',
-    href: '#',
-    amount: 22,
+    href: '/products?type=pots&enviroment=outdoor',
   },
 ];

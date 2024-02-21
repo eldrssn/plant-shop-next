@@ -1,6 +1,7 @@
 import { Orders, TSizeRanges } from '../types/lib';
 
 export const ORDER_KEY = 'order';
+export const SEARCH_FIELDS = ['title', 'realName', 'latinName'];
 
 export const ORDERS: Orders = {
   'price:asc': { 'variants.0.price': 1 },

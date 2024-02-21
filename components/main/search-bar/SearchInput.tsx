@@ -1,16 +1,50 @@
-import { Icon } from '@/components/ui/icons/Icon';
-import React from 'react';
+'use client';
 
-export const SearchInput = () => (
-  <div className="relative w-full bg-white mb-16">
-    <input type="text" className="w-full border border-neutral-200 p-5" />
-    <div className="absolute top-0 right-0 bg-teal-700 h-[75%] aspect-square m-2 grid place-content-center cursor-pointer">
-      <Icon
-        svgId="icon-magnify-glass"
-        width="23px"
-        height="23px"
-        className="fill-white"
+import React, { FC, FormEvent, useEffect, useState } from 'react';
+
+import { Icon } from '@/components/ui/icons/Icon';
+import { useRouter } from 'next/navigation';
+
+type SearchInputProps = {
+  isOpen: boolean;
+};
+
+export const SearchInput: FC<SearchInputProps> = ({ isOpen }) => {
+  const { replace } = useRouter();
+  const [query, setQuery] = useState('');
+
+  useEffect(() => {
+    if (!isOpen) {
+      setQuery('');
+    }
+  }, [isOpen]);
+
+  const handleSumbit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setQuery('');
+    replace(`/products?${'search'}=${query}`);
+  };
+
+  return (
+    <form onSubmit={handleSumbit} className="relative w-full bg-white mb-16">
+      <input
+        type="text"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+        className="w-full border border-neutral-200 p-5"
       />
-    </div>
-  </div>
-);
+
+      <button
+        type="submit"
+        className="absolute top-0 right-0 bg-teal-700 h-[75%] aspect-square m-2 grid place-content-center"
+      >
+        <Icon
+          svgId="icon-magnify-glass"
+          width="23px"
+          height="23px"
+          className="fill-white"
+        />
+      </button>
+    </form>
+  );
+};

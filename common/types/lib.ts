@@ -34,6 +34,10 @@ type ProductTypeFilter = {
   productType: string;
 }[];
 
+type SearchFilter = {
+  [key: string]: { $regex: RegExp };
+}[];
+
 export type SearchParamsProps = {
   [key: string]: string | string[] | undefined;
 };
@@ -45,6 +49,7 @@ export type ResultValue =
   | ColorFilter
   | PotSizeFilter
   | ProductTypeFilter
+  | SearchFilter
   | undefined;
 
 export type ResultType = {
@@ -55,7 +60,8 @@ type FilterTypes =
   | FilterGenerator<HeightFilter>
   | FilterGenerator<PotSizeFilter>
   | FilterGenerator<ColorFilter>
-  | FilterGenerator<ProductTypeFilter>;
+  | FilterGenerator<ProductTypeFilter>
+  | FilterGenerator<SearchFilter>;
 
 export type FeatureKeysGenerator = {
   [key: string]: FilterTypes;

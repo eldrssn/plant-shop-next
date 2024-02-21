@@ -1,22 +1,15 @@
+import Link from 'next/link';
 import React, { FC } from 'react';
 
 type TPopularLink = {
-  link: {
-    title: string;
-    href: string;
-    amount: number;
-  };
+  title: string;
+  href: string;
 };
 
-export const PopularLink: FC<TPopularLink> = ({
-  link: { title, href, amount },
-}) => (
-  <li key={title}>
-    <a
-      href={href}
-      className="text-teal-700 flex justify-between py-3 hover:text-zinc-800 "
-    >
-      <p>{title}</p> <span>{amount}</span>
-    </a>
+export const PopularLink: FC<TPopularLink> = ({ title, href }) => (
+  <li key={title} className="basis-1/2">
+    <Link href={href} className="text-teal-700 block py-3 hover:text-zinc-800 ">
+      {title}
+    </Link>
   </li>
 );

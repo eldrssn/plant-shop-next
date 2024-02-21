@@ -3,6 +3,7 @@ import {
   ORDER_KEY,
   PLANT_SIZE_RANGES,
   POT_SIZE_RANGES,
+  SEARCH_FIELDS,
 } from '../constants/lib';
 import {
   FeatureKeysGenerator,
@@ -39,11 +40,17 @@ export const generateColorFilter = (value: string[]) =>
 export const generateProductTypeFilter = (value: string[]) =>
   value.map((el) => ({ productType: el }));
 
+export const generateSearchFilter = (value: string[], fields: string[] = SEARCH_FIELDS) => {
+  const regex = new RegExp(value[0], 'i');
+  return fields.map(field => ({ [field]: { $regex: regex } }));
+};
+
 const featureKeysGenerator: FeatureKeysGenerator = {
   height: generateHeightFilter,
   color: generateColorFilter,
   potSize: generatePotSizeFilter,
   type: generateProductTypeFilter,
+  search: generateSearchFilter,
 };
 
 const transformValue = (key: string, value?: string | string[]) => {

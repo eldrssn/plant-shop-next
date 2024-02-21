@@ -5,9 +5,9 @@ import { PopularLink } from './PopularLink';
 export const PopularLinks = () => (
   <div>
     <h3 className="font-bold text-zinc-800 mb-6">Popular</h3>
-    <ul>
+    <ul className="flex justify-between flex-wrap">
       {popularSearchLinks.map((link) => (
-        <PopularLink link={link} key={link.title} />
+        <PopularLink {...link} key={link.title} />
       ))}
     </ul>
   </div>
