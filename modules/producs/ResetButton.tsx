@@ -7,7 +7,10 @@ export const ResetButton = () => {
   const pathname = usePathname();
 
   return (
-    <Link href={pathname} className="underline underline-offset-2">
+    <Link
+      href={pathname}
+      className="no-underline underline-offset-2 md:underline"
+    >
       Reset
     </Link>
   );

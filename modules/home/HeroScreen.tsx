@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { OutlinedLink } from '@/components/ui/outlined-link';
+import { OutlinedActionButton } from '@/components/ui/outlined-action-button';
 
 const HeroScreen = () => (
   <section className="bg-stone-200">
@@ -27,8 +27,8 @@ const HeroScreen = () => (
           </p>
 
           <div className="flex flex-col gap-y-4">
-            <OutlinedLink>Shop indoor plants</OutlinedLink>
-            <OutlinedLink>Shop outdoor plants</OutlinedLink>
+            <OutlinedActionButton>Shop indoor plants</OutlinedActionButton>
+            <OutlinedActionButton>Shop outdoor plants</OutlinedActionButton>
           </div>
         </div>
       </div>

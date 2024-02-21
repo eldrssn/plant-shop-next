@@ -1,8 +1,9 @@
 'use client';
 import { FC } from 'react';
+import { usePathname } from 'next/navigation';
 
 import { Icon } from '@/components/ui/icons/Icon';
-import { OutlinedLink } from '@/components/ui/outlined-link';
+import { OutlinedActionButton } from '@/components/ui/outlined-action-button';
 import { FilledActionBox } from '@/components/ui/filled-action-button';
 import useBodyOverflow from '@/common/hooks/useBodyOverflow';
 import { WithTransition } from '@/common/hocs/WithTransition';
@@ -22,6 +23,7 @@ export const FiltersPopupMobile: FC<TFiltersPopupMobile> = ({
   isOpen,
   filters,
 }) => {
+  const pathname = usePathname();
   useBodyOverflow(isOpen);
 
   return (
@@ -33,7 +35,7 @@ export const FiltersPopupMobile: FC<TFiltersPopupMobile> = ({
       isOpen={isOpen}
       classNames="absolute top-0 z-20 bottom-0 left-0 right-0 bg-white overflow-hidden"
     >
-      <form className="absolute top-0 bottom-0 left-0 right-0 overflow-auto">
+      <div className="absolute top-0 bottom-0 left-0 right-0 overflow-auto">
         <div className="px-6 py-4 mb-3 border-b bg-emerald-200 flex justify-between items-center">
           <p className="font-bold">Filters</p>
 
@@ -45,14 +47,14 @@ export const FiltersPopupMobile: FC<TFiltersPopupMobile> = ({
         <FilterCategories filters={filters} />
 
         <div className="fixed bottom-0 left-0 right-0 flex bg-white">
-          <OutlinedLink onClick={closeFilters} className="basis-1/2">
+          <OutlinedActionButton href={pathname} className="basis-1/2">
             Reset
-          </OutlinedLink>
+          </OutlinedActionButton>
           <FilledActionBox onClick={closeFilters} className="basis-1/2">
             Apply
           </FilledActionBox>
         </div>
-      </form>
+      </div>
     </WithTransition>
   );
 };
