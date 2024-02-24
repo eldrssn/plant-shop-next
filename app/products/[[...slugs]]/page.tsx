@@ -7,14 +7,19 @@ import { FilterCategories } from '@/modules/producs/FilterCategories';
 import { ResetButton } from '@/modules/producs/ResetButton';
 import { getProducts } from '@/lib/products-db';
 import { getFiltersList } from '@/lib/filters-db';
+import { convertSlugsToObject } from '@/common/utility';
 
 type Props = {
+  params: { slugs: string[] };
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export default async function Page({ searchParams }: Props) {
-  const { products, results } = await getProducts(searchParams);
-  const { filters } = await getFiltersList(searchParams);
+export default async function Page({ params: { slugs }, searchParams }: Props) {
+  const { products, results } = await getProducts({
+    ...convertSlugsToObject(slugs),
+    ...searchParams,
+  });
+  const { filters } = await getFiltersList(convertSlugsToObject(slugs));
 
   return (
     <main>

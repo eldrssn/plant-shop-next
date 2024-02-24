@@ -29,12 +29,12 @@ const HeroScreen = () => (
 
           <div className="flex flex-col gap-y-4">
             <OutlinedActionButton
-              href={`/${PRODUCTS_SLUG}?type=plants&enviroment=indoor`}
+              href={`/${PRODUCTS_SLUG}/type/plants/enviroment/indoor`}
             >
               Shop indoor plants
             </OutlinedActionButton>
             <OutlinedActionButton
-              href={`/${PRODUCTS_SLUG}?type=plants&enviroment=outdoor`}
+              href={`/${PRODUCTS_SLUG}/type/plants/enviroment/outdoor`}
             >
               Shop outdoor plants
             </OutlinedActionButton>

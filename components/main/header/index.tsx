@@ -5,7 +5,7 @@ import { Icon } from '@/components/ui/icons/Icon';
 
 import { Nav } from './Nav';
 import { SearchBar } from '../search-bar';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { Cart } from '../cart';
 
 const Header = () => {
@@ -40,7 +40,10 @@ const Header = () => {
         </div>
       </header>
 
-      <SearchBar handleClose={toggleSearchBar} isOpen={isOpenedSearchBar} />
+      <Suspense>
+        <SearchBar handleClose={toggleSearchBar} isOpen={isOpenedSearchBar} />
+      </Suspense>
+
       <Cart handleClose={toggleCart} isOpen={isOpenedCart} />
     </>
   );

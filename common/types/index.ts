@@ -25,3 +25,7 @@ export type TItem = {
   isOptions: boolean;
   img: string;
 };
+
+export type SlugObject = {
+  [key: string]: string[];
+};

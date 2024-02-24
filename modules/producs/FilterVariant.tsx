@@ -17,22 +17,24 @@ export const FilterVariant: FC<TFilterVariant> = ({
   const { replace } = useRouter();
   const searchParams = useSearchParams();
   const pathname = usePathname();
+  const pathArray = pathname.split('/');
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const params = new URLSearchParams(Array.from(searchParams.entries()));
+    const slugIndex = pathArray.indexOf(slug);
 
     if (event.target.checked) {
-      params.append(titleSlug, slug);
+      if (slugIndex === -1) {
+        pathArray.push(titleSlug, slug);
+      }
     } else {
-      const existingValues = params.getAll(titleSlug);
-
-      params.delete(titleSlug);
-      existingValues
-        .filter((el) => el !== slug)
-        .forEach((el) => params.append(titleSlug, el));
+      if (slugIndex !== -1) {
+        pathArray.splice(slugIndex - 1, 2);
+      }
     }
 
-    replace(`${pathname}?${params.toString()}`, {
+    const newPath = pathArray.join('/');
+
+    replace(`${newPath}?${searchParams.toString()}`, {
       scroll: false,
     });
   };
@@ -49,7 +51,7 @@ export const FilterVariant: FC<TFilterVariant> = ({
           type="checkbox"
           name={slug}
           className="cursor-pointer"
-          checked={searchParams.has(titleSlug, slug)}
+          checked={!!pathname.split('/').includes(slug)}
           onChange={handleChange}
         />
       </label>

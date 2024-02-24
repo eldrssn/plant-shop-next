@@ -5,31 +5,31 @@ export const catalog: TMenuItem[] = [
     title: 'Plants',
     type: 'main',
     picture: '/pictures/uyqprhxwdxligxwedzlo.webp',
-    href: '/products?type=plants',
+    href: '/products/type/plants',
     children: [
-      { title: 'All plants', href: '/products?type=plants' },
+      { title: 'All plants', href: '/products/type/plants' },
       {
         title: 'Indoor plants',
-        href: '/products?type=plants&enviroment=indoor',
+        href: '/products/type/plants/enviroment/indoor',
         children: [
           {
             title: 'Height',
             children: [
               {
                 title: 'Tiny',
-                href: '/products?type=plants&enviroment=indoor&height=xs',
+                href: '/products/type/plants/enviroment/indoor/height/xs',
               },
               {
                 title: 'Small',
-                href: '/products?type=plants&enviroment=indoor&height=sm',
+                href: '/products/type/plants/enviroment/indoor/height/sm',
               },
               {
                 title: 'Medium',
-                href: '/products?type=plants&enviroment=indoor&height=md',
+                href: '/products/type/plants/enviroment/indoor/height/md',
               },
               {
                 title: 'Tall',
-                href: '/products?type=plants&enviroment=indoor&height=lg',
+                href: '/products/type/plants/enviroment/indoor/height/lg',
               },
             ],
           },
@@ -38,21 +38,21 @@ export const catalog: TMenuItem[] = [
             children: [
               {
                 title: 'Hanging',
-                href: '/products?type=plants&enviroment=indoor&plantType=climbing',
+                href: '/products/type/plants/enviroment/indoor/plantType/climbing',
               },
               // { title: 'Patterned or colourful', href: '' },
-              // { title: 'Succulents & cacti', href: '' },
+              // { title: 'Succulents / cacti', href: '' },
               {
                 title: 'Fern',
-                href: '/products?type=plants&enviroment=indoor&plantType=ferns',
+                href: '/products/type/plants/enviroment/indoor/plantType/ferns',
               },
               {
                 title: 'Palms',
-                href: '/products?type=plants&enviroment=indoor&plantType=palms-trees',
+                href: '/products/type/plants/enviroment/indoor/plantType/palms-trees',
               },
               {
                 title: 'Flowering',
-                href: '/products?type=plants&enviroment=indoor&plantType=flowering',
+                href: '/products/type/plants/enviroment/indoor/plantType/flowering',
               },
             ],
           },
@@ -60,32 +60,32 @@ export const catalog: TMenuItem[] = [
           // { title: 'Most popular' },
           {
             title: 'Unkillables',
-            href: '/products?type=plants&enviroment=indoor&careLevel=unkillable',
+            href: '/products/type/plants/enviroment/indoor/careLevel/unkillable',
           },
           {
             title: 'Shade lovers',
-            href: '/products?type=plants&enviroment=indoor&light=shade',
+            href: '/products/type/plants/enviroment/indoor/light/shade',
           },
         ],
       },
       {
         title: 'Outdoor plants',
-        href: '/products?type=plants&enviroment=outdoor',
+        href: '/products/type/plants/enviroment/outdoor',
         children: [
           {
             title: 'Conditions',
             children: [
               {
                 title: 'Sunny spot',
-                href: '/products?type=plants&enviroment=outdoor&light=direct-sunlight',
+                href: '/products/type/plants/enviroment/outdoor/light/direct-sunlight',
               },
               {
                 title: 'Shady spot',
-                href: '/products?type=plants&enviroment=outdoor&light=shade',
+                href: '/products/type/plants/enviroment/outdoor/light/shade',
               },
               {
                 title: 'Windy spot',
-                href: '/products?type=plants&enviroment=outdoor&wind=true',
+                href: '/products/type/plants/enviroment/outdoor/wind/true',
               },
             ],
           },
@@ -93,45 +93,45 @@ export const catalog: TMenuItem[] = [
             title: 'Plant type',
             children: [
               {
-                title: 'Palms & trees',
-                href: '/products?type=plants&enviroment=outdoor&plantType=palms-trees',
+                title: 'Palms / trees',
+                href: '/products/type/plants/enviroment/outdoor/plantType/palms-trees',
               },
               {
                 title: 'Ferns',
-                href: '/products?type=plants&enviroment=outdoor&plantType=ferns',
+                href: '/products/type/plants/enviroment/outdoor/plantType/ferns',
               },
               {
                 title: 'Climbing',
-                href: '/products?type=plants&enviroment=outdoor&plantType=climbing',
+                href: '/products/type/plants/enviroment/outdoor/plantType/climbing',
               },
               {
-                title: 'Bamboo & grasses',
-                href: '/products?type=plants&enviroment=outdoor&plantType=bamboo-grasses',
+                title: 'Bamboo / grasses',
+                href: '/products/type/plants/enviroment/outdoor/plantType/bamboo-grasses',
               },
               {
                 title: 'Flowering',
-                href: '/products?type=plants&enviroment=outdoor&plantType=flowering',
+                href: '/products/type/plants/enviroment/outdoor/plantType/flowering',
               },
               {
                 title: 'Edibles',
-                href: '/products?type=plants&enviroment=outdoor&plantType=edibles',
+                href: '/products/type/plants/enviroment/outdoor/plantType/edibles',
               },
             ],
           },
         ],
       },
-      { title: 'New in', href: '/products?type=plants&new=new' },
+      { title: 'New in', href: '/products/type/plants/new/new' },
     ],
   },
   {
     title: 'Pots',
     type: 'main',
     picture: '/pictures/noovqiilppwn6v3iyfbt.webp',
-    href: '/products?type=pots',
+    href: '/products/type/pots',
     children: [
-      { title: 'All pots', href: '/products?type=pots' },
-      { title: 'Indoor pots', href: '/products?type=pots&enviroment=indoor' },
-      { title: 'Outdoor pots', href: '/products?type=pots&enviroment=outdoor' },
+      { title: 'All pots', href: '/products/type/pots' },
+      { title: 'Indoor pots', href: '/products/type/pots/enviroment/indoor' },
+      { title: 'Outdoor pots', href: '/products/type/pots/enviroment/outdoor' },
     ],
   },
   {
@@ -140,7 +140,7 @@ export const catalog: TMenuItem[] = [
     picture: '/pictures/xpfb2inkgcuscuoq8fia.jpg',
     children: [
       { title: 'All plant care' },
-      { title: 'Tools & accessories' },
+      { title: 'Tools / accessories' },
       {
         title: 'Indoor plant care',
         children: [
