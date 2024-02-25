@@ -8,6 +8,8 @@ export const TABLET_STOP = 4;
 export const PRODUCTS_SLUG = 'products';
 export const ITEM_SLUG = 'item';
 
+export const POTS_TYPE = 'pots';
+
 export const COLORS: Record<string, string> = {
   Black: '#313232',
   Grey: '#dedede',

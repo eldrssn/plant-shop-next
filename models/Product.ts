@@ -1,8 +1,19 @@
 import mongoose, { Schema } from 'mongoose';
 
-export type ColorsVarians = Record<string, string>[];
+export type ColorsVarians = {
+  name: string;
+  color: string;
+};
 
-type ProductVariant = {
+export type ProductVariant = {
+  size: number[];
+  price: number;
+  inStock: boolean;
+  imgIndex: number;
+  color?: ColorsVarians[];
+};
+
+export type CartProductVariant = {
   size: number[];
   price: number;
   inStock: boolean;
@@ -28,6 +39,20 @@ export type Product = {
   details: ProductDetails;
   imgs: string[];
   variants: ProductVariant[];
+};
+
+export type CartProduct = {
+  _id: string;
+  url: string;
+  productType: string;
+  title: string;
+  realName: string;
+  latinName: string;
+  details: ProductDetails;
+  imgs: string[];
+  variants: ProductVariant[];
+  variant: CartProductVariant;
+  quantity: number;
 };
 
 const ProductSchema = new Schema<Product>(

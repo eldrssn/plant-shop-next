@@ -40,9 +40,12 @@ export const generateColorFilter = (value: string[]) =>
 export const generateProductTypeFilter = (value: string[]) =>
   value.map((el) => ({ productType: el }));
 
-export const generateSearchFilter = (value: string[], fields: string[] = SEARCH_FIELDS) => {
+export const generateSearchFilter = (
+  value: string[],
+  fields: string[] = SEARCH_FIELDS
+) => {
   const regex = new RegExp(value[0], 'i');
-  return fields.map(field => ({ [field]: { $regex: regex } }));
+  return fields.map((field) => ({ [field]: { $regex: regex } }));
 };
 
 const featureKeysGenerator: FeatureKeysGenerator = {

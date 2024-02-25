@@ -1,17 +1,22 @@
 'use client';
 import React, { FC, useState } from 'react';
+import { observer } from 'mobx-react-lite';
 
 import { FilledActionBox } from '@/components/ui/filled-action-button';
 import { Product } from '@/models/Product';
+import { transformItem } from '@/common/utility';
+import { useStore } from '@/common/hooks/useStore';
 import { PotsColor } from './PotsColor';
 
-export const ItemInfo: FC<Product> = ({
-  title,
-  variants,
-  latinName,
-  realName,
-}) => {
+export const ItemInfo: FC<{ item: Product }> = observer(({ item }) => {
+  const { title, variants, latinName, realName } = item;
   const [choosenVariantIndex, setChoosenVariantIndex] = useState(0);
+  const [choosenColorIndex, setChoosenColorIndex] = useState(0);
+  const { addItem } = useStore();
+
+  const handleAddItemToCart = () => {
+    addItem(transformItem({ item, choosenVariantIndex, choosenColorIndex }));
+  };
 
   return (
     <div className="text-zinc-800 px-6 flex flex-col md:basis-1/2">
@@ -40,14 +45,21 @@ export const ItemInfo: FC<Product> = ({
         </ul>
       </div>
 
-      <PotsColor color={variants[choosenVariantIndex].color} />
+      <PotsColor
+        color={variants[choosenVariantIndex]?.color}
+        choosenColorIndex={choosenColorIndex}
+        setChoosenColorIndex={setChoosenColorIndex}
+      />
 
       <p className="font-bold text-sm mb-2">{realName}</p>
       <p className="text-neutral-500 text-sm mb-2">{latinName}</p>
 
-      <FilledActionBox className="max-w-full mb-12 mt-5 md:mt-auto md:mb-0">
+      <FilledActionBox
+        className="max-w-full mb-12 mt-5 md:mt-auto md:mb-0"
+        onClick={handleAddItemToCart}
+      >
         Add to bag
       </FilledActionBox>
     </div>
   );
-};
+});

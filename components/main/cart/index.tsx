@@ -1,7 +1,11 @@
+'use client';
+
 import React, { FC } from 'react';
+import { observer } from 'mobx-react-lite';
 
 import { WithTransition } from '@/common/hocs/WithTransition';
 import { Background } from '@/components/ui/background';
+import { useStore } from '@/common/hooks/useStore';
 
 import { defaultStyle, transitionStyles } from './animation';
 import { EmptyCart } from './EmptyCart';
@@ -12,37 +16,11 @@ type TCart = {
   isOpen: boolean;
 };
 
-export const cartItems = [
-  {
-    id: 1,
-    description: '120-130cm',
-    title: 'Big Ken',
-    price: 75,
-    isOptions: false,
-    img: '/pictures/vxnuidely9mqnh1zuwuv.webp',
-  },
-  {
-    id: 1,
-    description: '120-130cm',
-    title: 'Big Ken',
-    price: 75,
-    isOptions: false,
-    img: '/pictures/vxnuidely9mqnh1zuwuv.webp',
-  },
-  {
-    id: 1,
-    description: '120-130cm',
-    title: 'Big Ken',
-    price: 75,
-    isOptions: false,
-    img: '/pictures/vxnuidely9mqnh1zuwuv.webp',
-  },
-];
-
-export const Cart: FC<TCart> = ({ handleClose, isOpen }) => {
+export const Cart: FC<TCart> = observer(({ handleClose, isOpen }) => {
+  const { length } = useStore();
   return (
     <>
-      <Background isOpen={isOpen} onClick={handleClose} />
+      <Background isOpen={isOpen} onClick={handleClose} className="z-30" />
 
       <WithTransition
         style={{
@@ -50,11 +28,14 @@ export const Cart: FC<TCart> = ({ handleClose, isOpen }) => {
           transitionStyles,
         }}
         isOpen={isOpen}
-        classNames="fixed top-0 right-0 overflow-auto max-w-[450px] w-full h-screen bg-white z-20"
+        classNames="fixed top-0 right-0 overflow-auto max-w-[450px] w-full h-screen bg-white z-30"
       >
-        {/* <EmptyCart handleClose={handleClose} /> */}
-        <CartWithItems handleClose={handleClose} />
+        {length > 0 ? (
+          <CartWithItems handleClose={handleClose} />
+        ) : (
+          <EmptyCart handleClose={handleClose} />
+        )}
       </WithTransition>
     </>
   );
-};
+});
