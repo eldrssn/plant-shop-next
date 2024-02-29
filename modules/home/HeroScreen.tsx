@@ -10,7 +10,7 @@ const HeroScreen = () => (
     >
       <div className="relative basis-1/2 h-1/2 md:h-full">
         <Image
-          src="/pictures/welcome-plant.webp"
+          src="/pictures/welcome-plant.jpg"
           alt="welcome-plant"
           className="object-cover object-center w-full h-full"
           fill={true}

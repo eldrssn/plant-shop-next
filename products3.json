@@ -1,0 +1,48 @@
+[
+  {
+    
+    "url": "snake-plant-22",
+    "productType": "plants",
+    "title": "Susie",
+    "realName": "Snake Plant",
+    "latinName": "Sansevieria; Mother-in-law's tongue; Viper's bowstring hemp",
+    "details": {
+      "enviroment": "indoor",
+      "light": "direct-sunlight",
+      "careLevel": "unkillable",
+      "wind": "true",
+      "plantType": "palms-trees"
+    },
+    "imgs": [
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1647597878/cvsygxbio4urtf3f6fzt.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1670878372/him4opgqrfnizgnrzrgi.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1515510806/products/medium-sansevieria-dd9f3c.jpg",
+      "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1666620210/pcrlhtvyxfclp7znzfy3.jpg"
+    ],
+    "variants": [
+      {
+        "size": [20, 30],
+        "price": 10,
+        "inStock": "true",
+        "imgIndex": 0
+      },
+      {
+        "size": [50, 60],
+        "price": 25,
+        "inStock": "true",
+        "imgIndex": 1
+      },
+      {
+        "size": [70, 80],
+        "price": 65,
+        "inStock": "true",
+        "imgIndex": 2
+      },
+      {
+        "size": [90, 100],
+        "price": 110,
+        "inStock": "true",
+        "imgIndex": 3
+      }
+    ]
+  },

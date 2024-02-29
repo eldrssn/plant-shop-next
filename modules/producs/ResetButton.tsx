@@ -1,17 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { PRODUCTS_SLUG } from '@/common/constants';
 
-export const ResetButton = () => {
-  const pathname = usePathname();
-
-  return (
+export const ResetButton = () => (
     <Link
-      href={pathname}
+      href={`/${PRODUCTS_SLUG}`}
       className="no-underline underline-offset-2 md:underline"
     >
       Reset
     </Link>
   );
-};
+

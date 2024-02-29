@@ -3,12 +3,21 @@ export const defaultStyle = {
   opacity: '0',
   height: '0',
   transform: 'translateY(-20px)',
+  display: 'none',
 };
 
 export const transitionStyles = {
-  entering: { opacity: '1', transform: 'translateX(0)', height: 'auto' },
-  entered: { opacity: '1', transform: 'translateX(0)', height: 'auto' },
-  exiting: {},
-  exited: {},
+  entering: {
+    display: 'block',
+    opacity: '0',
+  },
+  entered: {
+    display: 'block',
+    opacity: '1',
+    transform: 'translateX(0)',
+    height: 'auto',
+  },
+  exiting: { display: 'block', opacity: '0' },
+  exited: { display: 'none' },
   unmounted: {},
 };

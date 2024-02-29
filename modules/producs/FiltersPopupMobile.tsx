@@ -7,10 +7,11 @@ import { OutlinedActionButton } from '@/components/ui/outlined-action-button';
 import { FilledActionBox } from '@/components/ui/filled-action-button';
 import useBodyOverflow from '@/common/hooks/useBodyOverflow';
 import { WithTransition } from '@/common/hocs/WithTransition';
+import { PRODUCTS_SLUG } from '@/common/constants';
+import { Filter } from '@/models/Filters';
 
 import { FilterCategories } from './FilterCategories';
 import { defaultStyle, transitionStyles } from './animation';
-import { Filter } from '@/models/Filters';
 
 type TFiltersPopupMobile = {
   closeFilters: () => void;
@@ -47,7 +48,10 @@ export const FiltersPopupMobile: FC<TFiltersPopupMobile> = ({
         <FilterCategories filters={filters} />
 
         <div className="fixed bottom-0 left-0 right-0 flex bg-white">
-          <OutlinedActionButton href={pathname} className="basis-1/2">
+          <OutlinedActionButton
+            href={`/${PRODUCTS_SLUG}`}
+            className="basis-1/2"
+          >
             Reset
           </OutlinedActionButton>
           <FilledActionBox onClick={closeFilters} className="basis-1/2">

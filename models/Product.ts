@@ -25,7 +25,7 @@ type ProductDetails = {
   enviroment: string;
   light: string;
   careLevel: string;
-  wind: boolean;
+  wind: string;
   plantType: string;
 };
 
@@ -67,7 +67,7 @@ const ProductSchema = new Schema<Product>(
       enviroment: String,
       light: String,
       careLevel: String,
-      wind: Boolean,
+      wind: String,
       plantType: String,
     },
     imgs: [String],
