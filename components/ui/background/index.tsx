@@ -20,7 +20,7 @@ const Background: FC<TBackground> = ({ className, onClick, isOpen }) => {
       }}
       timeout={500}
       isOpen={isOpen}
-      classNames={`absolute w-full h-screen bg-black/30 left-0 top-0 z-10 ${className}`}
+      classNames={`fixed w-full h-screen bg-black/30 left-0 top-0 z-10 ${className}`}
     >
       <div onClick={onClick} className={`h-full w-full`} />
     </WithTransition>

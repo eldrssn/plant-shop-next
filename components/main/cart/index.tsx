@@ -28,7 +28,7 @@ export const Cart: FC<TCart> = observer(({ handleClose, isOpen }) => {
           transitionStyles,
         }}
         isOpen={isOpen}
-        classNames="fixed top-0 right-0 overflow-auto max-w-[450px] w-full h-screen bg-white z-30"
+        classNames="fixed top-0 right-0 bottom-0 overflow-auto max-w-[450px] w-full h-screen bg-white z-30"
       >
         {length > 0 ? (
           <CartWithItems handleClose={handleClose} />

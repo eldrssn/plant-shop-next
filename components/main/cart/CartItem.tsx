@@ -7,6 +7,7 @@ import { Icon } from '@/components/ui/icons/Icon';
 import { ITEM_SLUG } from '@/common/constants';
 import { CartProduct } from '@/models/Product';
 import { useStore } from '@/common/hooks/useStore';
+import { formatSizes } from '@/common/utility';
 import { CartItemQuantity } from './CartItemQuantity';
 
 type TCartItem = {
@@ -37,7 +38,7 @@ export const CartItem: FC<TCartItem> = observer(({ item }) => {
           </Link>
 
           <p className="flex-grow text-neutral-500 text-sm">
-            {item.variant.size.join('-')}cm {item.variant.color?.name}
+            {formatSizes(item.variant.size)}cm {item.variant.color?.name}
           </p>
 
           <button type="button" onClick={() => deleteItem(item._id)}>

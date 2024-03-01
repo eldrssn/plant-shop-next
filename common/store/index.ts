@@ -8,6 +8,7 @@ enableStaticRendering(typeof window === 'undefined');
 export interface CartStoreProps {
   items: CartProduct[];
   _deliveryPrice: number;
+  _lastItem: CartProduct | null;
   getItem: (_id: string) => CartProduct | undefined;
   changeQuantity: (_id: string, quantity: number) => void;
   addItem: (item: CartProduct) => void;
@@ -22,6 +23,7 @@ export interface CartStoreProps {
 class CartStore implements CartStoreProps {
   items: CartProduct[] = [];
   _deliveryPrice: number = 20;
+  _lastItem: CartProduct | null = null;
 
   constructor() {
     makeAutoObservable(this);
@@ -37,10 +39,11 @@ class CartStore implements CartStoreProps {
   };
 
   addItem = (item: CartProduct) => {
+    this._lastItem = item;
+
+    // TODO: fix quantity
     const olditem = this.getItem(item._id);
     if (olditem) {
-      console.log(olditem);
-
       olditem.quantity += 1;
       return;
     }
@@ -53,7 +56,11 @@ class CartStore implements CartStoreProps {
   };
 
   get length() {
-    return this.items.length;
+    return this.items.reduce((accum, next) => (accum += next.quantity), 0);
+  }
+
+  get lastItem() {
+    return this._lastItem;
   }
 
   get subTotal() {

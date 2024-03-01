@@ -1,21 +1,20 @@
 'use client';
 
+import { Suspense, useState } from 'react';
+
 import { LogoIcon } from '@/components/ui/icons/LogoIcon';
 import { Icon } from '@/components/ui/icons/Icon';
 
 import { Nav } from './Nav';
 import { SearchBar } from '../search-bar';
-import { Suspense, useState } from 'react';
-import { Cart } from '../cart';
+import { CartButton } from './CartButton';
 
 const Header = () => {
   const [isOpenedSearchBar, setIsOpenSearchBar] = useState(false);
-  const [isOpenedCart, setIsOpenCart] = useState(false);
 
   const toggleSearchBar = () =>
     setIsOpenSearchBar((isOpenedSearchBar) => !isOpenedSearchBar);
-  const toggleCart = () => setIsOpenCart((isOpenedCart) => !isOpenedCart);
-
+  
   return (
     <>
       <header className="sticky top-0 z-20 w-full h-16 shadow-lg bg-white/80 lg:h-20 backdrop-blur-sm">
@@ -32,9 +31,7 @@ const Header = () => {
                 <Icon width="20px" height="25px" svgId="icon-magnify-glass" />
               </button>
 
-              <button className="p-3" onClick={toggleCart}>
-                <Icon width="20px" height="25px" svgId="icon-shopping-bag" />
-              </button>
+              <CartButton />
             </div>
           </div>
         </div>
@@ -43,8 +40,6 @@ const Header = () => {
       <Suspense>
         <SearchBar handleClose={toggleSearchBar} isOpen={isOpenedSearchBar} />
       </Suspense>
-
-      <Cart handleClose={toggleCart} isOpen={isOpenedCart} />
     </>
   );
 };

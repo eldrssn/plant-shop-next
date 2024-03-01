@@ -69,3 +69,20 @@ export const transformItem = ({
     quantity,
   };
 };
+
+export const transformSingleItem = ({
+  item,
+  quantity = 1,
+}: {
+  item: Product;
+  quantity?: number;
+}) =>
+  transformItem({
+    choosenVariantIndex: 0,
+    choosenColorIndex: 0,
+    item,
+    quantity,
+  });
+
+export const formatSizes = (size?: number[] | number) =>
+  size && Array.isArray(size) ? size.join('-') : size;

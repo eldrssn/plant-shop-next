@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FC, FormEvent, useEffect, useState } from 'react';
+import React, { FC, FormEvent, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { Icon } from '@/components/ui/icons/Icon';
@@ -13,10 +13,13 @@ type SearchInputProps = {
 export const SearchInput: FC<SearchInputProps> = ({ isOpen }) => {
   const { replace } = useRouter();
   const [query, setQuery] = useState('');
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     if (!isOpen) {
       setQuery('');
+    } else {
+      inputRef.current && inputRef.current.focus();
     }
   }, [isOpen]);
 
@@ -29,6 +32,7 @@ export const SearchInput: FC<SearchInputProps> = ({ isOpen }) => {
   return (
     <form onSubmit={handleSumbit} className="relative w-full bg-white mb-16">
       <input
+        ref={inputRef}
         type="text"
         value={query}
         onChange={(event) => setQuery(event.target.value)}

@@ -9,7 +9,7 @@ type TEmptyCart = {
   handleClose: () => void;
 };
 export const EmptyCart: FC<TEmptyCart> = ({ handleClose }) => (
-  <div className="flex flex-col pt-8 px-4 mb-16 md:pt-16 md:px-12 h-full">
+  <div className="flex flex-col mt-8 mx-4 mb-16 md:mt-16 md:mx-12">
     <div className="ml-auto mb-5">
       <CloseButton onClick={handleClose} />
     </div>

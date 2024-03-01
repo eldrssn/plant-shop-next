@@ -23,10 +23,10 @@ export const SearchBar: FC<TSearchBar> = ({ handleClose, isOpen }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams.toString()]);
-  
+
   return (
     <>
-      <Background onClick={handleClose} isOpen={isOpen} />
+      <Background onClick={handleClose} isOpen={isOpen} className="z-0" />
 
       <WithTransition
         style={{
@@ -34,7 +34,7 @@ export const SearchBar: FC<TSearchBar> = ({ handleClose, isOpen }) => {
           transitionStyles,
         }}
         isOpen={isOpen}
-        classNames="fixed top-16 lg:top-20 flex w-full z-10 flex-col items-center h-auto md:bg-zinc-50 bg-zinc-50/80 backdrop-blur-sm shadow-lg"
+        classNames="fixed top-16 left-0 right-0 lg:top-20 flex w-full z-10 flex-col items-center h-auto md:bg-zinc-50 bg-zinc-50/80 backdrop-blur-sm shadow-lg"
       >
         <>
           <div className="ml-auto">
