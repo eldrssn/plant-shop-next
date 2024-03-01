@@ -1,7 +1,7 @@
-import { TItem } from '@/common/types';
+import { Product } from '@/models/Product';
 
 export type TCarousel = {
-  carouselList: TItem[];
+  items: Product[];
 };
 
 export enum Directions {

@@ -1,11 +1,11 @@
 import { CarouselWrapper } from '@/modules/home/CarouselWrapper';
-import { popularItems } from '@/content/carousel';
+import { Product } from '@/models/Product';
 
-const PopularItemsScreen = () => (
+const PopularItemsScreen = ({ items }: { items: Product[] }) => (
   <CarouselWrapper
-    header="Shop the look"
-    description="We’ve made it easy for you to bring your home to life with plants and pots."
-    carouselList={popularItems}
+    header="Patch’s top 20"
+    description="Discover and shop our most popular plants, pots and accessories."
+    items={items}
   />
 );
 

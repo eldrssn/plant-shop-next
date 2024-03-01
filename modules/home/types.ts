@@ -1,9 +1,10 @@
-import { OfferPositions, TItem } from '@/common/types';
+import { OfferPositions } from '@/common/types';
+import { Product } from '@/models/Product';
 
 export type TCarouselWrapper = {
   header: string;
   description: string;
-  carouselList: TItem[];
+  items: Product[];
 };
 
 export type TAdItem = {

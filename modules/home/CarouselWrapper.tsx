@@ -6,7 +6,7 @@ import { TCarouselWrapper } from './types';
 const CarouselWrapper: FC<TCarouselWrapper> = ({
   header,
   description,
-  carouselList,
+  items,
 }) => (
   <section className="flex flex-col lg:flex-row pt-32 pb-16 max-w-[1680px] m-auto">
     <article className="p-5 lg:basis-1/4 lg:min-w-[25%]">
@@ -15,7 +15,7 @@ const CarouselWrapper: FC<TCarouselWrapper> = ({
         <p>{description}</p>
       </div>
     </article>
-    <Carousel carouselList={carouselList} />
+    <Carousel items={items} />
   </section>
 );
 

@@ -17,15 +17,6 @@ export enum OfferPositions {
   RIGHT = 'right',
 }
 
-export type TItem = {
-  id: number;
-  title: string;
-  description?: string;
-  price: number;
-  isOptions: boolean;
-  img: string;
-};
-
 export type SlugObject = {
   [key: string]: string[];
 };

@@ -1,6 +1,6 @@
 'use client';
 import { FC } from 'react';
-import { ProductItem } from '@/components/main/product-card';
+import { ProductItem } from '@/components/main/product-item';
 import { Product } from '@/models/Product';
 
 type ResultsProps = {

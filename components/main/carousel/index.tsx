@@ -6,15 +6,15 @@ import { useCarousel } from '@/common/hooks/useCarousel';
 import { useInViewportOnce } from '@/common/hooks/useInViewportOnce';
 import { WithTransition } from '@/common/hocs/WithTransition';
 
-import { CarouselItem } from './CarouselItem';
 import { ArrowButton } from './ArrowButton';
 
 import { getDefaultStyles, transitionStyles } from './constants';
 import { Directions, TCarousel } from './types';
+import { ProductItem } from '../product-item';
 
-const Carousel: FC<TCarousel> = ({ carouselList }) => {
+const Carousel: FC<TCarousel> = ({ items }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const listLength = carouselList.length;
+  const listLength = items.length;
   const elementWidth = ref.current?.offsetWidth || 0;
 
   const { counter, clickNext, clickPrev, isNexTLink, isPrevButton } =
@@ -32,7 +32,7 @@ const Carousel: FC<TCarousel> = ({ carouselList }) => {
               style={{ transform: `translateX(${counter * elementWidth}px)` }}
               className={`flex flex-row flex-nowrap transition-transform duration-200`}
             >
-              {carouselList.map((item, index) => (
+              {items.map((item, index) => (
                 <WithTransition
                   key={item.title}
                   style={{
@@ -42,7 +42,7 @@ const Carousel: FC<TCarousel> = ({ carouselList }) => {
                   isOpen={isInViewport}
                   classNames="min-w-full"
                 >
-                  <CarouselItem {...item} key={item.id} />
+                  <ProductItem item={item} key={item._id} />
                 </WithTransition>
               ))}
             </div>

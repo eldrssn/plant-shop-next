@@ -18,3 +18,6 @@ export const COLORS: Record<string, string> = {
   Stone: '#c2b280',
   Pink: '#ffc0cb',
 };
+
+export const PARAMS_ITEMS_NEW = { new: ['new-in'] };
+export const PARAMS_ITEMS_POPULAR = { popular: ['popular'] };
