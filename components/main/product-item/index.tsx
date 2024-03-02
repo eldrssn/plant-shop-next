@@ -5,12 +5,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Product } from '@/models/Product';
-import { ITEM_SLUG } from '@/common/constants';
+import { ITEM_SLUG, MIN_PRELOADED_IMAGES } from '@/common/constants';
 
 import { LinkToOptions } from '../carousel/LinkToOptions';
 import { ActionToCart } from '../carousel/ActionToCart';
 
-const ProductItem: FC<{ item: Product }> = ({ item }) => {
+const ProductItem: FC<{ item: Product; index: number }> = ({ item, index }) => {
   const { url, imgs, realName, title, variants } = item;
 
   return (
@@ -25,6 +25,7 @@ const ProductItem: FC<{ item: Product }> = ({ item }) => {
             src={imgs[0]}
             alt={title}
             className="transition-transform duration-300 hover:scale-105"
+            priority={index < MIN_PRELOADED_IMAGES}
           />
         </Link>
         <div className="flex flex-col justify-between px-5 py-4 h-36">

@@ -42,7 +42,7 @@ const Carousel: FC<TCarousel> = ({ items }) => {
                   isOpen={isInViewport}
                   classNames="min-w-full"
                 >
-                  <ProductItem item={item} key={item._id} />
+                  <ProductItem item={item} key={item._id} index={index} />
                 </WithTransition>
               ))}
             </div>

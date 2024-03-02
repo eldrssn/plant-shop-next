@@ -25,6 +25,7 @@ export const CartItem: FC<TCartItem> = observer(({ item }) => {
           alt={`${item.title}-image`}
           width={100}
           height={100}
+          priority={true}
         />
       </Link>
 

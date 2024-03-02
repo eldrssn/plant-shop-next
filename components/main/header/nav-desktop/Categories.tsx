@@ -51,6 +51,7 @@ const Categories: FC<TSubMenuList> = ({
               src={picture}
               alt={mainSubcategory.title}
               className="object-cover object-center h-full"
+              priority={true}
             />
           )}
         </div>

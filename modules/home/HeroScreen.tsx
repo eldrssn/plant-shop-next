@@ -14,6 +14,7 @@ const HeroScreen = () => (
           alt="welcome-plant"
           className="object-cover object-center w-full h-full"
           fill={true}
+          priority={true}
         />
       </div>
 
