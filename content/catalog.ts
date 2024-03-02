@@ -40,8 +40,10 @@ export const catalog: TMenuItem[] = [
                 title: 'Hanging',
                 href: '/products/type/plants/enviroment/indoor/plantType/climbing',
               },
-              // { title: 'Patterned or colourful', href: '' },
-              // { title: 'Succulents / cacti', href: '' },
+              {
+                title: 'Succulents / cacti',
+                href: '/products/type/plants/plantType/succulents',
+              },
               {
                 title: 'Fern',
                 href: '/products/type/plants/enviroment/indoor/plantType/ferns',
@@ -56,8 +58,6 @@ export const catalog: TMenuItem[] = [
               },
             ],
           },
-
-          // { title: 'Most popular' },
           {
             title: 'Unkillables',
             href: '/products/type/plants/enviroment/indoor/careLevel/unkillable',
@@ -85,7 +85,7 @@ export const catalog: TMenuItem[] = [
               },
               {
                 title: 'Windy spot',
-                href: '/products/type/plants/enviroment/outdoor/wind/true',
+                href: '/products/type/plants/enviroment/outdoor/wind/is-wind',
               },
             ],
           },
@@ -120,7 +120,7 @@ export const catalog: TMenuItem[] = [
           },
         ],
       },
-      { title: 'New in', href: '/products/type/plants/new/new' },
+      { title: 'New in', href: '/products/type/plants/new/new-in' },
     ],
   },
   {

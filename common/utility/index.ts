@@ -1,7 +1,8 @@
 import { regexEmail } from '@/common/constants/regex';
 import { SlugObject } from '../types';
 import { CartProduct, CartProductVariant, Product } from '@/models/Product';
-import { POTS_TYPE } from '../constants';
+import { MAX_TITLES_COUNT, POTS_TYPE } from '../constants';
+import { Filter } from '@/models/Filters';
 
 export const validate = (email: string) =>
   email !== '' && regexEmail.test(email);
@@ -86,3 +87,32 @@ export const transformSingleItem = ({
 
 export const formatSizes = (size?: number[] | number) =>
   size && Array.isArray(size) ? size.join('-') : size;
+
+export const generateFilterTitle = (
+  filters: Filter[],
+  slugs: SlugObject,
+  isHead?: boolean
+) => {
+  const connector = isHead ? ' | ' : ' - ';
+  const filterTitles: string[] = [];
+
+  filters.forEach((filter) => {
+    const paramValues = slugs[filter.slug] || [];
+
+    filter.variants.forEach((variant) => {
+      if (paramValues.includes(variant.slug)) {
+        filterTitles.push(variant.title);
+      }
+    });
+  });
+
+  if (filterTitles.length === 0) {
+    return 'All Products';
+  }
+
+  if (filterTitles.length > MAX_TITLES_COUNT) {
+    return filterTitles.slice(0, MAX_TITLES_COUNT).join(connector);
+  }
+
+  return filterTitles.join(connector);
+};

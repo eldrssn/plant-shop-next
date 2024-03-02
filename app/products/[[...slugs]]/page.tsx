@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import type { Metadata } from 'next';
 
 import { Sorting } from '@/modules/producs/Sorting';
 import { FiltersButtonsMobile } from '@/modules/producs/FiltersButtonsMobile';
@@ -7,25 +8,42 @@ import { FilterCategories } from '@/modules/producs/FilterCategories';
 import { ResetButton } from '@/modules/producs/ResetButton';
 import { getProducts } from '@/lib/products-db';
 import { getFiltersList } from '@/lib/filters-db';
-import { convertSlugsToObject } from '@/common/utility';
+import { convertSlugsToObject, generateFilterTitle } from '@/common/utility';
 
 type Props = {
   params: { slugs: string[] };
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slugs = params.slugs;
+
+  const { filters } = await getFiltersList(convertSlugsToObject(slugs));
+  return {
+    title: `${generateFilterTitle(
+      filters,
+      convertSlugsToObject(slugs),
+      true
+    )} | Patch`,
+  };
+}
+
 export default async function Page({ params: { slugs }, searchParams }: Props) {
+  const slugObject = convertSlugsToObject(slugs);
+
   const { products, results } = await getProducts({
-    ...convertSlugsToObject(slugs),
+    ...slugObject,
     ...searchParams,
   });
-  const { filters } = await getFiltersList(convertSlugsToObject(slugs));
+  const { filters } = await getFiltersList(slugObject);
+
+  const title = generateFilterTitle(filters, slugObject);
 
   return (
     <main>
       <div className="flex flex-col gap-3 my-10">
         <h1 className="text-5xl font-bold text-zinc-800 font-header text-center">
-          All Products
+          {title}
         </h1>
         <p className="text-center block md:hidden">
           {results || 0} result {results && results > 1 ? 's' : ''}
