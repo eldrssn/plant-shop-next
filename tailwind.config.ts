@@ -14,8 +14,8 @@ const config: Config = {
       colors: {
         backSecond: '#f6f2ea',
       },
-      boxShadow: {
-        checkout: '0 -2px 5px -3px #757373',
+      backgroundImage: {
+        'placeholder-image': "url('/pictures/placeholder_grey.png')",
       },
       keyframes: {
         wiggle: {

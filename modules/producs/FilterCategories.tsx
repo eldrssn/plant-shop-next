@@ -9,7 +9,7 @@ type FilterCategoriesProps = {
 };
 
 export const FilterCategories: FC<FilterCategoriesProps> = ({ filters }) => (
-  <div className="mb-20">
+  <div className="mb-6">
     {filters.map((filter, i) => (
       <FilterCategory
         key={filter.slug}

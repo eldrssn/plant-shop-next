@@ -12,13 +12,13 @@ import { ActionToCart } from '../carousel/ActionToCart';
 
 const ProductItem: FC<{ item: Product }> = ({ item }) => {
   const { url, imgs, realName, title, variants } = item;
-  
+
   return (
     <article className="px-3 bg-transparent">
       <div className="flex flex-col border text-zinc-800">
         <Link
           href={`/${ITEM_SLUG}/${url}`}
-          className="relative overflow-hidden aspect-square"
+          className="relative overflow-hidden aspect-square bg-placeholder-image bg-cover bg-no-repeat bg-center"
         >
           <Image
             fill={true}
