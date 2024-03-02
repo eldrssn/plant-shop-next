@@ -12,6 +12,7 @@ import { ActionToCart } from '../carousel/ActionToCart';
 
 const ProductItem: FC<{ item: Product; index: number }> = ({ item, index }) => {
   const { url, imgs, realName, title, variants } = item;
+  const isSingle = variants.length === 1;
 
   return (
     <article className="px-3 bg-transparent">
@@ -37,13 +38,15 @@ const ProductItem: FC<{ item: Product; index: number }> = ({ item, index }) => {
             <p className="text-xs uppercase">{realName}</p>
           </Link>
 
-          <p>£{variants[0].price}.00</p>
+          <p>
+            {isSingle ? '' : 'From '}£{variants[0].price}.00
+          </p>
         </div>
 
-        {variants.length > 1 ? (
-          <LinkToOptions href={`/${ITEM_SLUG}/${url}`} />
-        ) : (
+        {isSingle ? (
           <ActionToCart item={item} />
+        ) : (
+          <LinkToOptions href={`/${ITEM_SLUG}/${url}`} />
         )}
       </div>
     </article>

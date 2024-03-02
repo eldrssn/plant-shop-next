@@ -19,7 +19,7 @@ export const PotsColor: FC<PotsColorProps> = ({
     <div className="flex flex-col gap-3">
       <p className="font-bold">
         Colour:{' '}
-        <span className="font-normal">{color[choosenColorIndex].name}</span>
+        <span className="font-normal">{color[choosenColorIndex]?.name}</span>
       </p>
       <ul className="flex gap-3">
         {color.map(({ name }, i) => (
