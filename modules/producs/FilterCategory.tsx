@@ -8,14 +8,16 @@ type TFilterCategory = {
   title: string;
   slug: string;
   variants: Variant[];
+  isOpen: boolean;
 };
 
 export const FilterCategory: FC<TFilterCategory> = ({
   title,
   slug: titleSlug,
   variants,
+  isOpen,
 }) => {
-  const [isOpenList, setIsOpenList] = useState(true);
+  const [isOpenList, setIsOpenList] = useState(isOpen);
 
   const toggleList = () => setIsOpenList((isOpenList) => !isOpenList);
 

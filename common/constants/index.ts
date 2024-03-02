@@ -21,3 +21,5 @@ export const COLORS: Record<string, string> = {
 
 export const PARAMS_ITEMS_NEW = { new: ['new-in'] };
 export const PARAMS_ITEMS_POPULAR = { popular: ['popular'] };
+
+export const DEFAULT_OPEN_FILTERS = 3;
