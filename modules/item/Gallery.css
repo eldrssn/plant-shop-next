@@ -1,0 +1,52 @@
+.splide__pagination__page {
+  background-color: #fff;
+  width: 14px;
+  height: 14px;
+  opacity: 1;
+  margin: 6px;
+}
+
+.splide__pagination__page.is-active {
+  background-color: rgb(15 118 110 / 0.8);
+}
+
+.splide {
+  .splide__arrow--next {
+    right: 0;
+  }
+
+  .splide__arrow--prev {
+    left: 0;
+  }
+
+  .splide__arrows > .splide__arrow  {
+    background-color: rgb(15 118 110 / 0.8);
+    border-radius: unset;
+    height: 3em;
+    width: 3em;
+
+    transition: opacity .5s ease-in-out;
+    opacity: 0;
+
+    svg {
+      fill: white;
+    }
+  }
+}
+
+.splide:hover {
+  .splide__arrows > .splide__arrow  {
+    opacity: 1;
+  }
+
+  .splide__arrows > .splide__arrow:disabled {
+    opacity: 0;
+    cursor:unset;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .splide > .splide__arrows {
+    display: none;
+  }
+}

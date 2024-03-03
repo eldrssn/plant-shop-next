@@ -1,16 +1,61 @@
 'use client';
+import React, { FC, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import React, { FC } from 'react';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
+
+import { ProductVariant } from '@/models/Product';
+import './Gallery.css';
 
 type TGallery = {
   imgs: string[];
   title: string;
+  choosenVariantIndex: number | null;
+  choosenColorIndex: number;
+  variants: ProductVariant[];
 };
 
-export const Gallery: FC<TGallery> = ({ imgs, title }) => {
+export const Gallery: FC<TGallery> = ({
+  imgs,
+  title,
+  choosenVariantIndex,
+  choosenColorIndex,
+  variants,
+}) => {
+  const mainRef = useRef<typeof Splide | null>(null);
+
+  useEffect(() => {
+    if (mainRef.current && choosenVariantIndex !== null) {
+      const imgIndex = variants[choosenVariantIndex].imgIndex;
+
+      mainRef.current.go(
+        Array.isArray(imgIndex) ? imgIndex[choosenColorIndex] : imgIndex
+      );
+    }
+  }, [choosenVariantIndex, choosenColorIndex, variants]);
+
   return (
-    <div className="relative w-full aspect-square md:basis-1/2">
-      <Image src={imgs[0]} alt={title} fill={true} className="object-cover" />
+    <div className="w-full aspect-square md:basis-1/2 relative">
+      <Splide
+        ref={mainRef}
+        aria-label="slider"
+        options={{
+          gap: '1rem',
+        }}
+      >
+        {imgs.map((img, i) => (
+          <SplideSlide key={i}>
+            <div className="relative w-full aspect-square">
+              <Image
+                src={img}
+                alt={title}
+                fill={true}
+                className="object-cover"
+              />
+            </div>
+          </SplideSlide>
+        ))}
+      </Splide>
     </div>
   );
 };

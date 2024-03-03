@@ -9,7 +9,7 @@ export type ProductVariant = {
   size: number[];
   price: number;
   inStock: boolean;
-  imgIndex: number;
+  imgIndex: number | number[];
   color?: ColorsVarians[];
 };
 
@@ -17,7 +17,7 @@ export type CartProductVariant = {
   size: number[];
   price: number;
   inStock: boolean;
-  imgIndex: number;
+  imgIndex: number | number[];
   color?: ColorsVarians;
 };
 
@@ -76,7 +76,7 @@ const ProductSchema = new Schema<Product>(
         size: [Number],
         price: Number,
         inStock: Boolean,
-        imgIndex: Number,
+        imgIndex: [Number],
       },
     ],
   },
