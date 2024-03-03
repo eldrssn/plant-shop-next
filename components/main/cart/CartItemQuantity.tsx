@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import { observer } from 'mobx-react-lite';
 import { Icon } from '@/components/ui/icons/Icon';
 
@@ -10,24 +10,19 @@ type CartItemQuantityProps = {
 };
 
 export const CartItemQuantity: FC<CartItemQuantityProps> = observer(
-  ({ quantity: defaultQuanity, changeQuantity }) => {
-    const [quantity, setQuantity] = useState<number>(defaultQuanity);
+  ({ quantity, changeQuantity }) => {
+    console.log(quantity);
 
     const increment = () => {
       if (quantity <= 1) {
         return;
       }
-      setQuantity((quantity) => quantity - 1);
+      changeQuantity(quantity - 1);
     };
 
     const decrement = () => {
-      setQuantity((quantity) => quantity + 1);
+      changeQuantity(quantity + 1);
     };
-
-    useEffect(() => {
-      changeQuantity(quantity);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [quantity]);
 
     return (
       <div className="flex gap-4">
@@ -39,7 +34,7 @@ export const CartItemQuantity: FC<CartItemQuantityProps> = observer(
           type="number"
           className="w-8 text-center text-sm"
           value={quantity}
-          onChange={(event) => setQuantity(+event.target.value)}
+          onChange={(event) => changeQuantity(+event.target.value)}
         />
 
         <button type="button" className="w-6 h-6" onClick={decrement}>

@@ -1,12 +1,14 @@
 import Filters from '@/models/Filters';
 import connectDB from './connect-db';
 import { SearchParamsProps } from '@/common/types/lib';
-import { getFiltersForFilters } from '@/common/utility/lib';
+import { getSearchParamsFilters } from '@/common/utility/lib';
 
 export async function getFiltersList(searchParams: SearchParamsProps = {}) {
   try {
     await connectDB();
-    const filters = await Filters.find(getFiltersForFilters(searchParams?.type))
+    const filters = await Filters.find(
+      getSearchParamsFilters(searchParams?.type)
+    )
       .lean()
       .exec();
 

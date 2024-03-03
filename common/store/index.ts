@@ -41,10 +41,9 @@ class CartStore implements CartStoreProps {
   addItem = (item: CartProduct) => {
     this._lastItem = item;
 
-    // TODO: fix quantity
-    const olditem = this.getItem(item._id);
-    if (olditem) {
-      olditem.quantity += 1;
+    const itemExists = this.getItem(item._id);
+    if (itemExists) {
+      itemExists.quantity += item.quantity;
       return;
     }
 

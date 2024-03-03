@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { Product } from '@/models/Product';
 import { ITEM_SLUG, MIN_PRELOADED_IMAGES } from '@/common/constants';
 
-import { LinkToOptions } from '../carousel/LinkToOptions';
-import { ActionToCart } from '../carousel/ActionToCart';
+import { LinkToOptions } from './LinkToOptions';
+import { ActionToCart } from './ActionToCart';
 
 const ProductItem: FC<{ item: Product; index: number }> = ({ item, index }) => {
   const { url, imgs, realName, title, variants } = item;

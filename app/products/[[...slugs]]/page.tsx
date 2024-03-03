@@ -15,14 +15,17 @@ type Props = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slugs = params.slugs;
+export async function generateMetadata({
+  params: { slugs },
+  searchParams,
+}: Props): Promise<Metadata> {
+  const slugObject = convertSlugsToObject(slugs);
 
-  const { filters } = await getFiltersList(convertSlugsToObject(slugs));
+  const { filters } = await getFiltersList(slugObject);
   return {
     title: `${generateFilterTitle(
       filters,
-      convertSlugsToObject(slugs),
+      { ...slugObject, ...searchParams },
       true
     )} | Patch`,
   };
@@ -30,14 +33,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params: { slugs }, searchParams }: Props) {
   const slugObject = convertSlugsToObject(slugs);
+  const allParams = { ...slugObject, ...searchParams };
 
-  const { products, results } = await getProducts({
-    ...slugObject,
-    ...searchParams,
-  });
+  const { products, results } = await getProducts(allParams);
   const { filters } = await getFiltersList(slugObject);
 
-  const title = generateFilterTitle(filters, slugObject);
+  const title = generateFilterTitle(filters, allParams);
 
   return (
     <main>

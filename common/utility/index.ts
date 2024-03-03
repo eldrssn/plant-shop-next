@@ -3,6 +3,7 @@ import { SlugObject } from '../types';
 import { CartProduct, CartProductVariant, Product } from '@/models/Product';
 import { MAX_TITLES_COUNT, POTS_TYPE } from '../constants';
 import { Filter } from '@/models/Filters';
+import { SearchParamsProps } from '../types/lib';
 
 export const validate = (email: string) =>
   email !== '' && regexEmail.test(email);
@@ -90,11 +91,16 @@ export const formatSizes = (size?: number[] | number) =>
 
 export const generateFilterTitle = (
   filters: Filter[],
-  slugs: SlugObject,
+  slugs: SearchParamsProps,
   isHead?: boolean
 ) => {
   const connector = isHead ? ' | ' : ' - ';
   const filterTitles: string[] = [];
+  console.log(slugs);
+
+  if (slugs.search) {
+    return `Search: ${slugs.search}`;
+  }
 
   filters.forEach((filter) => {
     const paramValues = slugs[filter.slug] || [];

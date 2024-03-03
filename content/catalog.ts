@@ -137,7 +137,7 @@ export const catalog: TMenuItem[] = [
   {
     title: 'Plant care',
     type: 'main',
-    picture: '/pictures/xpfb2inkgcuscuoq8fia.jpg',
+    picture: '/pictures/xpfb2inkgcuscuoq8fia.webp',
     children: [
       { title: 'All plant care' },
       { title: 'Tools / accessories' },

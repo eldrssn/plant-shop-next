@@ -84,8 +84,7 @@ export const getOrder = (key?: string | string[]) => {
   return key && !Array.isArray(key) ? ORDERS[key] : {};
 };
 
-//TODO: rename
-export const getFiltersForFilters = (value?: string | string[]) => {
+export const getSearchParamsFilters = (value?: string | string[]) => {
   if (!value) {
     return {};
   }

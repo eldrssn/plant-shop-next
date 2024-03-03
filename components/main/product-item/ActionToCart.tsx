@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { FilledActionBox } from '@/components/ui/filled-action-button';
 import { useStore } from '@/common/hooks/useStore';
 import { Product } from '@/models/Product';
-import { transformItem, transformSingleItem } from '@/common/utility';
+import { transformSingleItem } from '@/common/utility';
 
 const ActionToCart = ({ item }: { item: Product }) => {
   const ref = useRef<HTMLFormElement & { count: HTMLInputElement }>(null);
@@ -13,10 +13,13 @@ const ActionToCart = ({ item }: { item: Product }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const count = ref.current?.count.value;
+    console.log('count', count);
 
     if (!count) {
       return;
     }
+    console.log(transformSingleItem({ item, quantity: +count }));
+
     addItem(transformSingleItem({ item, quantity: +count }));
   };
 
