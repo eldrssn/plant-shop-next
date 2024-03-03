@@ -7,6 +7,7 @@ import { WithTransition } from '@/common/hocs/WithTransition';
 import { SubMenuList } from './SubMenuList';
 import { defaultStyle, transitionStyles } from './constants';
 import { TSubMenuList } from './types';
+import Link from 'next/link';
 
 const Categories: FC<TSubMenuList> = ({
   submenu,
@@ -38,9 +39,12 @@ const Categories: FC<TSubMenuList> = ({
         )}
       >
         <div className="ml-auto flex flex-row basis-2/3 max-w-[53.5rem] mt-12">
-          <div className="text-xl font-medium basis-1/5 [@media(min-width:1200px)]:basis-1/4">
+          <Link
+            href={mainSubcategory.href || ''}
+            className="text-xl font-medium basis-1/5 [@media(min-width:1200px)]:basis-1/4"
+          >
             {mainSubcategory.title}
-          </div>
+          </Link>
 
           <SubMenuList submenu={subcategories} isOpenMenu={isOpenMenu} />
         </div>

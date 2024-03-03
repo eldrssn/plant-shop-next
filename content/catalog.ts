@@ -4,7 +4,7 @@ export const catalog: TMenuItem[] = [
   {
     title: 'Plants',
     type: 'main',
-    picture: '/pictures/uyqprhxwdxligxwedzlo.webp',
+    picture: '/pictures/qr1iimuwgzf0lr8ljckj.jpg',
     href: '/products/type/plants',
     children: [
       { title: 'All plants', href: '/products/type/plants' },
