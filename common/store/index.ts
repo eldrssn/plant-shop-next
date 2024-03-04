@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 import { enableStaticRendering } from 'mobx-react-lite';
 
-import { CartProduct } from '@/models/Product';
+import { CartProduct } from '@/common/models/Product';
 
 enableStaticRendering(typeof window === 'undefined');
 

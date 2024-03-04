@@ -1,4 +1,4 @@
-import { TMenuItem } from '@/components/main/header/types';
+import { TMenuItem } from '@/components/header/types';
 
 export type TNavContext = {
   isOpen: boolean;

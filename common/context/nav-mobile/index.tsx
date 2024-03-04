@@ -3,9 +3,9 @@
 import { FC, createContext, useCallback, useEffect, useState } from 'react';
 
 import { useToggleMenu } from '@/common/hooks/useToggleMenu';
-import { catalog } from '@/content/catalog';
+import { catalog } from '@/components/header/constants';
 import { Children } from '@/common/types';
-import { TMenuItem } from '@/components/main/header/types';
+import { TMenuItem } from '@/components/header/types';
 
 import { TNavContext } from './types';
 import { initialNavContext } from './constants';
@@ -13,6 +13,7 @@ import { initialNavContext } from './constants';
 export const NavMobileContext = createContext<TNavContext>(initialNavContext);
 
 const NavMobileProvider: FC<Children> = ({ children }) => {
+  // TODO: remake
   const { isOpen, openMenu, closeMenu } = useToggleMenu();
   const [isMounted, setIsMounted] = useState(isOpen);
   const [menuList, setMenuList] = useState<TMenuItem[][]>([catalog]);

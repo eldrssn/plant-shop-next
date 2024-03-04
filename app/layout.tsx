@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
 import './globals.css';
-import { Header } from '@/components/main/header';
-import { Footer } from '@/components/main/footer';
-import { PopupCart } from '@/components/main/popup-cart';
-import { StoreProvider } from '@/common/context/store';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
+import { PopupCart } from '@/components/popup-cart';
+import { StoreProvider } from '@/common/store/context';
 
 export const metadata: Metadata = {
   title: 'Patch Plants: Plants Made Easy | Delivered to your Door| Patch',

@@ -1,18 +1,15 @@
-import { Suspense } from 'react';
 import type { Metadata } from 'next';
 
-import { Sorting } from '@/modules/producs/Sorting';
-import { FiltersButtonsMobile } from '@/modules/producs/FiltersButtonsMobile';
-import { Results } from '@/modules/producs/Results';
-import { FilterCategories } from '@/modules/producs/FilterCategories';
-import { ResetButton } from '@/modules/producs/ResetButton';
-import { getProducts } from '@/lib/products-db';
-import { getFiltersList } from '@/lib/filters-db';
-import { convertSlugsToObject, generateFilterTitle } from '@/common/utility';
+import { getProducts } from '@/common/lib/products-db';
+import { getFiltersList } from '@/common/lib/filters-db';
+import { generateFilterTitle, convertSlugsToObject } from '@/common/utils/';
+import { SearchParams } from '@/common/types';
+import { ProductsHeading } from '@/modules/products-page/ProductsHeading';
+import { ProductsContent } from '@/modules/products-page/ProductsContent';
 
 type Props = {
   params: { slugs: string[] };
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: SearchParams;
 };
 
 export async function generateMetadata({
@@ -22,12 +19,14 @@ export async function generateMetadata({
   const slugObject = convertSlugsToObject(slugs);
 
   const { filters } = await getFiltersList(slugObject);
+  const title = generateFilterTitle({
+    filters,
+    slugs: { ...slugObject, ...searchParams },
+    isHead: true,
+  });
+
   return {
-    title: `${generateFilterTitle(
-      filters,
-      { ...slugObject, ...searchParams },
-      true
-    )} | Patch`,
+    title: `${title} | Patch`,
   };
 }
 
@@ -38,41 +37,16 @@ export default async function Page({ params: { slugs }, searchParams }: Props) {
   const { products, results } = await getProducts(allParams);
   const { filters } = await getFiltersList(slugObject);
 
-  const title = generateFilterTitle(filters, allParams);
+  const title = generateFilterTitle({ filters, slugs: allParams });
 
   return (
     <main>
-      <div className="flex flex-col gap-3 my-10">
-        <h1 className="text-5xl font-bold text-zinc-800 font-header text-center">
-          {title}
-        </h1>
-        <p className="text-center block md:hidden">
-          {results || 0} result {results && results > 1 ? 's' : ''}
-        </p>
-      </div>
-
-      <FiltersButtonsMobile filters={filters} />
-
-      <div className="max-w-screen-xl md:px-10 mx-auto w-full flex justify-center gap-4">
-        <div className="w-1/4 border h-fit hidden md:block mb-20">
-          <div className="flex justify-between gap-10 items-center px-6 py-4 border-b bg-emerald-200">
-            <h3 className="font-bold text-lg">Filter</h3>
-            <ResetButton />
-          </div>
-
-          <FilterCategories filters={filters} />
-        </div>
-
-        <div className="w-full md:w-3/4">
-          <div className="justify-between items-center pl-3 pb-3 hidden md:flex">
-            <p className="text-sm text-neutral-500">{results} results</p>
-            <Suspense>
-              <Sorting />
-            </Suspense>
-          </div>
-          <Results products={products} />
-        </div>
-      </div>
+      <ProductsHeading title={title} results={results} />
+      <ProductsContent
+        filters={filters}
+        results={results}
+        products={products}
+      />
     </main>
   );
 }

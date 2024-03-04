@@ -3,13 +3,13 @@ import useBodyOverflow from '@/common/hooks/useBodyOverflow';
 import { WithTransition } from '@/common/hocs/WithTransition';
 import { defaultStyle, transitionStyles } from './animation';
 
-type TBackground = {
+type BackgroundProps = {
   isOpen: boolean;
   className?: string;
   onClick?: () => void;
 };
 
-const Background: FC<TBackground> = ({ className, onClick, isOpen }) => {
+const Background: FC<BackgroundProps> = ({ className, onClick, isOpen }) => {
   useBodyOverflow(isOpen);
 
   return (

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { validate } from '@/common/utility';
+import { validate } from '../utils/';
 
 export const useEmailForm = () => {
   const [email, setEmail] = useState('');

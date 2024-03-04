@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 
-import { getItem } from '@/lib/products-db';
-import { ItemPage } from '@/modules/item';
+import { getItem } from '@/common/lib/item-db';
+import { SearchParams } from '@/common/types';
+import { ItemPage } from '@/modules/item-page';
 
 type Props = {
   params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: SearchParams;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
