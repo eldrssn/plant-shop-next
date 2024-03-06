@@ -20,8 +20,8 @@ const NavMobile = () => {
       <Background onClick={closeMenu} isOpen={isOpen} />
 
       <nav
-        className={`absolute left-0 top-0 max-w-[700px] w-full h-screen bg-backSecond z-20
-          opacity-100 duration-200 transition-transform -translate-x-full overflow-hidden
+        className={`absolute left-0 top-0 max-w-[450px] w-full h-screen bg-backSecond z-20
+          opacity-100 duration-1000 ease-in-out transition-transform -translate-x-full overflow-hidden
           ${isOpen ? ' translate-x-0' : ''}`}
       >
         <Header />

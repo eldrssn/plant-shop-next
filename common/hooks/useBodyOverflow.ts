@@ -3,17 +3,16 @@
 import { useEffect } from 'react';
 
 export const useBodyOverflow = (isOpen: boolean) => {
-  useEffect(() => {
-    const previousOverflow = document.body.style.overflow;
 
+  useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflowY = 'hidden';
     } else {
-      document.body.style.overflow = previousOverflow;
+      document.body.style.overflowY = 'auto';
     }
 
     return () => {
-      document.body.style.overflow = previousOverflow;
+      document.body.style.overflowY = 'auto';
     };
   }, [isOpen]);
 };
