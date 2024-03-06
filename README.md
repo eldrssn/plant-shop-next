@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/eldrssn/plant-shop-next/public/pictures/hello.jpg" alt="Screen Shot">
+    <img src="https://github.com/eldrssn/plant-shop-next/blob/master/public/pictures/hello.jpg" alt="Screen Shot">
 </p>
 
 ## Project Overview 🎉
@@ -38,25 +38,25 @@ Search by product name for quick access to the desired plants.
 ## Screenshots 📺
 
 <p align="center">
-    <img src="https://github.com/eldrssn/plant-shop-next/public/pictures/hero.png" alt="Screen Shot">
+    <img src="https://github.com/eldrssn/plant-shop-next/blob/master/public/pictures/hero.png" alt="Screen Shot">
 </p>
 
 <p align="center">
-    <img src="https://github.com/eldrssn/plant-shop-next/public/pictures/catalog.png" alt="Screen Shot">
+    <img src="https://github.com/eldrssn/plant-shop-next/blob/master/public/pictures/catalog.png" alt="Screen Shot">
 </p>
 
 <p align="center">
-    <img src="https://github.com/eldrssn/plant-shop-next/public/pictures/cart.png" alt="Screen Shot">
+    <img src="https://github.com/eldrssn/plant-shop-next/blob/master/public/pictures/cart.png" alt="Screen Shot">
 </p>
 
 <p align="center">
-    <img src="https://github.com/eldrssn/plant-shop-next/public/pictures/item.png" alt="Screen Shot">
+    <img src="https://github.com/eldrssn/plant-shop-next/blob/master/public/pictures/item.png" alt="Screen Shot">
 </p>
 
 ## Performance 🚀
 
 <p align="center">
-    <img src="https://github.com/eldrssn/plant-shop-next/public/pictures/perfomance.png" alt="Screen Shot">
+    <img src="https://github.com/eldrssn/plant-shop-next/blob/master/public/pictures/perfomance.png" alt="Screen Shot">
 </p>
 
 ## Live 📍
