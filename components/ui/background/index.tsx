@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, Suspense } from 'react';
 import { useBodyOverflow } from '@/common/hooks/useBodyOverflow';
 import { useCloseModalOnChangeURL } from '@/common/hooks/useCloseModalOnChangeURL';
 import { WithTransition } from '@/common/hocs/WithTransition';
@@ -10,7 +10,7 @@ type BackgroundProps = {
   onClick: () => void;
 };
 
-const Background: FC<BackgroundProps> = ({ className, onClick, isOpen }) => {
+const BackgroundBox: FC<BackgroundProps> = ({ className, onClick, isOpen }) => {
   useBodyOverflow(isOpen);
   useCloseModalOnChangeURL(isOpen, onClick);
 
@@ -28,5 +28,11 @@ const Background: FC<BackgroundProps> = ({ className, onClick, isOpen }) => {
     </WithTransition>
   );
 };
+
+const Background: FC<BackgroundProps> = ({ className, onClick, isOpen }) => (
+  <Suspense>
+    <BackgroundBox className={className} onClick={onClick} isOpen={isOpen} />
+  </Suspense>
+);
 
 export { Background };
