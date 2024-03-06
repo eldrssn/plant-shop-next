@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+    <img src="https://github.com/eldrssn/plant-shop-next/public/pictures/hello.jpg" alt="Screen Shot">
+</p>
 
-## Getting Started
+## Project Overview 🎉
 
-First, run the development server:
+E-commerce plants shop created for plant lovers, providing a user-friendly interface to browse and buy a variety of plants. The project is built using Next.js, providing high performance and responsiveness.
+
+## Key Features: 🧑🏽‍💻
+
+**Home Page:**
+- Welcomes users and provides brief information about the shop.
+- Contains attractive plant images and invites users to explore the range.
+
+**Catalogue:**
+- Divided into plant categories for easy navigation.
+- Ability to sort and filter products for quick search.
+- Each product is presented with a brief description and image.
+
+**Product card:**
+- Detailed information about the selected plant, including scientific name and care features.
+- High resolution images of the product so that users can get a closer look at the plant.
+
+**Shopping basket:**
+Ability to add items to the shopping basket for later checkout.
+View the contents of the basket with the ability to change the number of items and delete items.
+
+**Search:**
+Search by product name for quick access to the desired plants.
+
+
+## Tech/framework used 🔧
+
+ - **Frontend:** React, Next.js, MobX, Tailwind CSS, Typescript
+ - **Backend:** MongoDB
+ - **Additional libraries:** Splide, React Transition Group, Sharp
+
+## Screenshots 📺
+
+<p align="center">
+    <img src="https://github.com/eldrssn/plant-shop-next/public/pictures/hero.png" alt="Screen Shot">
+</p>
+
+<p align="center">
+    <img src="https://github.com/eldrssn/plant-shop-next/public/pictures/catalog.png" alt="Screen Shot">
+</p>
+
+<p align="center">
+    <img src="https://github.com/eldrssn/plant-shop-next/public/pictures/cart.png" alt="Screen Shot">
+</p>
+
+<p align="center">
+    <img src="https://github.com/eldrssn/plant-shop-next/public/pictures/item.png" alt="Screen Shot">
+</p>
+
+## Performance 🚀
+
+<p align="center">
+    <img src="https://github.com/eldrssn/plant-shop-next/public/pictures/perfomance.png" alt="Screen Shot">
+</p>
+
+## Live 📍
+
+[https://plant-shop-next.vercel.app](https://plant-shop-next.vercel.app) 
+
+## Installation 💾
 
 ```bash
+git clone git@github.com:eldrssn/plant-shop-next.git
+pnpm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## License 🔱
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Under license (MIT, Apache etc)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+MIT © [Maxim Kalimullin]()
