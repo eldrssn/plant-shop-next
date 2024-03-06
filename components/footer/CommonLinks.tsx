@@ -6,7 +6,7 @@ const CommonLinks: FC<TCommonLinks> = ({ order, title, links }) => (
     <div
       className={`flex flex-col text-center md:text-start m-auto pb-8 gap-y-2 md:w-fit`}
     >
-      <h5 className="text-base font-bold">{title}</h5>
+      <h2 className="text-base font-bold">{title}</h2>
       {links.map(({ title, link }, index) => (
         <a
           key={index}

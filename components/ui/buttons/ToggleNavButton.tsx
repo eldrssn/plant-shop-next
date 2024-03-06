@@ -6,6 +6,7 @@ const ToggleNavButton: FC<TOnClick> = ({ onClick }) => (
     type="button"
     className="relative float-left clear-both w-5 h-4 ml-7"
     onClick={onClick}
+    aria-label="Open Menu"
   >
     <span
       className='

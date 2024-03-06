@@ -44,6 +44,7 @@ const ActionToCart: FC<ActionToCartProps> = ({ item }) => {
           name="count"
           defaultValue={1}
           min={1}
+          aria-label="count"
           className="w-full px-4 py-3 outline-none"
         />
       </div>

@@ -24,6 +24,7 @@ const ArrowButton: FC<ArrowButtonProps> = ({
       className={`bg-teal-700 w-12 h-12 absolute opasity-100 top-1/2 transition-opacity duration-300 
       ${isDisabled ? ' opacity-0' : ''}
       ${isNext ? ' right-0' : ' left-0'}`}
+      aria-label={`${direction}-arrow`}
     >
       <span className="hidden">{direction}</span>
       <Icon

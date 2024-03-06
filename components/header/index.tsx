@@ -27,7 +27,7 @@ const Header = () => {
 
           <div className="flex-1 w-1/3 ">
             <div className="flex flex-row float-right clear-both pr-4">
-              <button type="button" className="p-3" onClick={openSearchBar}>
+              <button type="button" className="p-3" aria-label="Open searchbar" onClick={openSearchBar}>
                 <Icon width="20px" height="25px" svgId="icon-magnify-glass" />
               </button>
 

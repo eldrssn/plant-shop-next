@@ -34,6 +34,7 @@ export const Sorting = () => {
         Choose order
       </label>
       <select
+        aria-label="order"
         className="px-6 py-4 w-full md:ml-2 md:mr-3 truncate font-bold break-words border-b font-sm md:font-normal md:border"
         name="order"
         id="order"

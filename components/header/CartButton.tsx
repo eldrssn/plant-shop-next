@@ -18,7 +18,12 @@ export const CartButton = observer(() => {
 
   return (
     <>
-      <button type="button" className="relative p-3" onClick={handleOpen}>
+      <button
+        type="button"
+        className="relative p-3"
+        aria-label="Open Cart"
+        onClick={handleOpen}
+      >
         <Icon
           width="20px"
           height="25px"
