@@ -39,12 +39,10 @@ const Gallery: FC<GalleryProps> = ({
       className="bg-white"
       ref={mainRef}
       aria-label="slider"
-      options={{
-        gap: '1rem',
-      }}
+      options={{ gap: '1rem', role: 'group' }}
     >
       {imgs.map((img, i) => (
-        <SplideSlide key={i}>
+        <SplideSlide role="slide" key={i}>
           <div className="relative w-full aspect-square">
             <Image src={img} alt={title} fill={true} className="object-cover" />
           </div>

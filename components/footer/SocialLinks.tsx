@@ -1,10 +1,12 @@
+import Link from 'next/link';
 import { socialLinks } from './constants/social-links';
 
 const SocialLinks = () => (
   <ul className="pt-4 m-auto w-fit">
     {socialLinks.map(({ title, link, id, Icon }) => (
       <li className="inline-block p-2 m-auto" key={id}>
-        <a
+        <Link
+          aria-label={`Go to ${title}`}
           href={link}
           target="_blank"
           rel="noreferrer"
@@ -12,7 +14,7 @@ const SocialLinks = () => (
         >
           <span className="hidden">{title}</span>
           <Icon />
-        </a>
+        </Link>
       </li>
     ))}
   </ul>

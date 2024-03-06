@@ -3,6 +3,7 @@ import { TOnClick } from './types';
 
 const ToggleNavButton: FC<TOnClick> = ({ onClick }) => (
   <button
+    type="button"
     className="relative float-left clear-both w-5 h-4 ml-7"
     onClick={onClick}
   >
@@ -12,7 +13,7 @@ const ToggleNavButton: FC<TOnClick> = ({ onClick }) => (
             after:bg-black after:content-[""] after:h-[2px] after:w-5 after:absolute after:bottom-1.5 after:left-0
             before:bg-black before:content-[""] before:h-[2px] before:w-5 before:absolute before:top-1.5 before:left-0
           '
-    ></span>
+    />
   </button>
 );
 

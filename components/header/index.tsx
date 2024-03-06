@@ -12,8 +12,8 @@ import { SearchBar } from '../search-bar';
 const Header = () => {
   const [isOpenedSearchBar, setIsOpenSearchBar] = useState(false);
 
-  const toggleSearchBar = () =>
-    setIsOpenSearchBar((isOpenedSearchBar) => !isOpenedSearchBar);
+  const closeSearchBar = () => setIsOpenSearchBar(false);
+  const openSearchBar = () => setIsOpenSearchBar(true);
 
   return (
     <>
@@ -27,7 +27,7 @@ const Header = () => {
 
           <div className="flex-1 w-1/3 ">
             <div className="flex flex-row float-right clear-both pr-4">
-              <button className="p-3" onClick={toggleSearchBar}>
+              <button type="button" className="p-3" onClick={openSearchBar}>
                 <Icon width="20px" height="25px" svgId="icon-magnify-glass" />
               </button>
 
@@ -38,7 +38,7 @@ const Header = () => {
       </header>
 
       <Suspense>
-        <SearchBar handleClose={toggleSearchBar} isOpen={isOpenedSearchBar} />
+        <SearchBar handleClose={closeSearchBar} isOpen={isOpenedSearchBar} />
       </Suspense>
     </>
   );

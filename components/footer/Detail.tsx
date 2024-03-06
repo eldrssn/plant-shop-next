@@ -16,7 +16,7 @@ const Detail: FC<TDetail> = ({ icon, title, descriptions }) => (
     </div>
 
     <div>
-      <h4 className="mb-4 font-bold uppercase">{title}</h4>
+      <h2 className="mb-4 font-bold uppercase">{title}</h2>
       <div className="flex flex-col gap-2 text-sm">
         {descriptions.map((description, i) => (
           <p className="block" key={i}>

@@ -1,11 +1,10 @@
 'use client';
 import { FC } from 'react';
-import { usePathname } from 'next/navigation';
 
 import { Icon } from '@/components/ui/icons/Icon';
 import { OutlinedActionButton } from '@/components/ui/buttons/OutlinedActionButton';
 import { FilledActionButton } from '@/components/ui/buttons/FilledActionButton';
-import useBodyOverflow from '@/common/hooks/useBodyOverflow';
+import { useBodyOverflow } from '@/common/hooks/useBodyOverflow';
 import { WithTransition } from '@/common/hocs/WithTransition';
 import { PRODUCTS_SLUG } from '@/common/constants';
 import { Filter } from '@/common/models/Filters';
@@ -24,7 +23,6 @@ export const FiltersPopupMobile: FC<TFiltersPopupMobile> = ({
   isOpen,
   filters,
 }) => {
-  const pathname = usePathname();
   useBodyOverflow(isOpen);
 
   return (

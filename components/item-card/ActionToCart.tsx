@@ -32,7 +32,14 @@ const ActionToCart: FC<ActionToCartProps> = ({ item }) => {
   return (
     <form onSubmit={handleSubmit} ref={ref} className="flex flex-row border-t">
       <div className="w-24">
+        <label
+          className="absolute invisible w-0 h-0"
+          htmlFor={`quantity-${item.url}`}
+        >
+          Quantity
+        </label>
         <input
+          id={`quantity-${item.url}`}
           type="number"
           name="count"
           defaultValue={1}

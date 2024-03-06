@@ -7,7 +7,7 @@ const FilledActionButton: FC<ButtonProps> = ({
   className,
   children,
   onClick,
-  type,
+  type = 'button',
 }) => {
   const classNames = `w-full text-white bg-teal-700 font-bold py-4 px-10 block max-w-[300px] ease-in-out transition-colors duration-300
       hover:bg-teal-700/80 text-center ${className}`;

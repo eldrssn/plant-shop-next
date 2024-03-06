@@ -9,11 +9,16 @@ export type ArrowButtonProps = {
   direction: Directions;
 };
 
-const ArrowButton: FC<ArrowButtonProps> = ({ onClick, isDisabled, direction }) => {
+const ArrowButton: FC<ArrowButtonProps> = ({
+  onClick,
+  isDisabled,
+  direction,
+}) => {
   const isNext = direction === Directions.NEXT;
 
   return (
     <button
+      type="button"
       onClick={onClick}
       disabled={isDisabled}
       className={`bg-teal-700 w-12 h-12 absolute opasity-100 top-1/2 transition-opacity duration-300 

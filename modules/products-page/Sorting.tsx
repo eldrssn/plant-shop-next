@@ -29,18 +29,26 @@ export const Sorting = () => {
   };
 
   return (
-    <select
-      className="px-6 py-4 font-bold break-words border-b basis-1/2 font-sm md:font-normal md:min-w-1/3 md:w-1/3 md:basis-1/3 md:border md:mr-3"
-      name="order"
-      value={currentParams.get('order') || ''}
-      onChange={onSelect}
-    >
-      <option value="">Sort By: Default</option>
-      {optionsArray.map((option) => (
-        <option key={option.value} value={option.value}>
-          {option.title}
+    <div className="w-1/2 flex basis-1/2 md:min-w-1/3 md:w-1/2 md:basis-1/2 lg:basis-1/3">
+      <label className="absolute invisible w-0 h-0" htmlFor="order">
+        Choose order
+      </label>
+      <select
+        className="px-6 py-4 w-full md:ml-2 md:mr-3 truncate font-bold break-words border-b font-sm md:font-normal md:border"
+        name="order"
+        id="order"
+        value={currentParams.get('order') || ''}
+        onChange={onSelect}
+      >
+        <option className="" value="">
+          Sort By: Default
         </option>
-      ))}
-    </select>
+        {optionsArray.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.title}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };

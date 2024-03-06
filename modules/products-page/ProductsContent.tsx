@@ -26,7 +26,7 @@ export const ProductsContent: FC<ProductsContentProps> = ({
     <div className="flex justify-center w-full max-w-screen-xl gap-4 mx-auto md:px-10">
       <div className="hidden w-1/4 mb-20 border h-fit md:block">
         <div className="flex items-center justify-between gap-10 px-6 py-4 border-b bg-emerald-200">
-          <h3 className="text-lg font-bold">Filter</h3>
+          <h2 className="text-lg font-bold">Filter</h2>
           <ResetButton />
         </div>
 

@@ -16,13 +16,14 @@ type SearchBarProps = {
 };
 
 export const SearchBar: FC<SearchBarProps> = ({ handleClose, isOpen }) => {
-  const searchParams = useSearchParams();
-  useEffect(() => {
-    if (isOpen) {
-      handleClose();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams.toString()]);
+  // const searchParams = useSearchParams();
+  // useEffect(() => {
+  //   console.log('isOpen SearchBar', isOpen);
+
+  //   if (isOpen) {
+  //     handleClose();
+  //   }
+  // }, [searchParams.toString()]);
 
   return (
     <>

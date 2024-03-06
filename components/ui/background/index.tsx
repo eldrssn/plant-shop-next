@@ -1,16 +1,18 @@
 import { FC } from 'react';
-import useBodyOverflow from '@/common/hooks/useBodyOverflow';
+import { useBodyOverflow } from '@/common/hooks/useBodyOverflow';
+import { useCloseModalOnChangeURL } from '@/common/hooks/useCloseModalOnChangeURL';
 import { WithTransition } from '@/common/hocs/WithTransition';
 import { defaultStyle, transitionStyles } from './animation';
 
 type BackgroundProps = {
   isOpen: boolean;
   className?: string;
-  onClick?: () => void;
+  onClick: () => void;
 };
 
 const Background: FC<BackgroundProps> = ({ className, onClick, isOpen }) => {
   useBodyOverflow(isOpen);
+  useCloseModalOnChangeURL(isOpen, onClick);
 
   return (
     <WithTransition

@@ -14,7 +14,7 @@ export const ProductsHeading: FC<ProductsHeadingProps> = ({
       {title}
     </h1>
     <p className="block text-center md:hidden">
-      {results} result {results && results > 1 ? 's' : ''}
+      {results} result{results && results > 1 ? 's' : ''}
     </p>
   </div>
 );

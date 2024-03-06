@@ -28,9 +28,9 @@ const AdItem: FC<TAdItem> = ({
 
     <div className="my-auto md:w-2/5">
       <div className="py-12 px-7">
-        <h3 className="mb-6 text-2xl font-bold text-zinc-800 md:text-4xl">
+        <h2 className="mb-6 text-2xl font-bold text-zinc-800 md:text-4xl">
           {title}
-        </h3>
+        </h2>
         <p className="mb-8">{description}</p>
 
         <FilledActionButton href={buttonHref}>{buttonText}</FilledActionButton>

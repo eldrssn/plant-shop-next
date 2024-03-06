@@ -36,7 +36,7 @@ const ItemCard: FC<ItemCardProps> = ({ item, index }) => {
             href={`/${ITEM_SLUG}/${url}`}
             className="transition-colors hover:text-teal-700"
           >
-            <h3 className="pb-2 text-xl font-bold">{title}</h3>
+            <h2 className="pb-2 text-xl font-bold">{title}</h2>
             <p className="text-xs uppercase">{realName}</p>
           </Link>
 

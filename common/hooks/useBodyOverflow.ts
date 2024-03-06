@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-const useBodyOverflow = (isOpen: boolean) => {
+export const useBodyOverflow = (isOpen: boolean) => {
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
 
@@ -17,5 +17,3 @@ const useBodyOverflow = (isOpen: boolean) => {
     };
   }, [isOpen]);
 };
-
-export default useBodyOverflow;

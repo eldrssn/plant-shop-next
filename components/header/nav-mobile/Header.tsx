@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div className="flex flex-row justify-between px-8 py-5">
       {!isMainCategory ? (
-        <button onClick={handleBackClick}>
+        <button type="button" onClick={handleBackClick}>
           <ArrowBackIcon />
         </button>
       ) : (

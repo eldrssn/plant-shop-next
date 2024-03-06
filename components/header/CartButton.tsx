@@ -11,13 +11,14 @@ export const CartButton = observer(() => {
   const [isOpenedCart, setIsOpenCart] = useState(false);
   const { length } = useStore();
 
-  const toggleCart = () => setIsOpenCart((isOpenedCart) => !isOpenedCart);
+  const handleClose = () => setIsOpenCart(false);
+  const handleOpen = () => setIsOpenCart(true);
 
   const isLength = length > 0;
 
   return (
     <>
-      <button className="relative p-3" onClick={toggleCart}>
+      <button type="button" className="relative p-3" onClick={handleOpen}>
         <Icon
           width="20px"
           height="25px"
@@ -32,7 +33,7 @@ export const CartButton = observer(() => {
         </span>
       </button>
 
-      <Cart handleClose={toggleCart} isOpen={isOpenedCart} />
+      <Cart handleClose={handleClose} isOpen={isOpenedCart} />
     </>
   );
 });

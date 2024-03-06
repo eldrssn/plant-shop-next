@@ -15,7 +15,7 @@ export const CartWithItems: FC<CartWithItemsProps> = ({ handleClose }) => {
   return (
     <div className="flex flex-col h-full pt-8 mx-4 md:pt-16 md:mx-12">
       <div className="flex justify-between mb-10">
-        <h3 className="text-xl font-bold text-zinc-800">Your bag</h3>
+        <h2 className="text-xl font-bold text-zinc-800">Your bag</h2>
         <CloseButton onClick={handleClose} />
       </div>
 

@@ -17,9 +17,9 @@ const DescriptionScreen = () => (
 
       <div className="flex items-center h-3/5 md:h-screen md:w-1/2">
         <div className="py-12 px-8 md:max-w-[37.5rem] lg:pl-20">
-          <h3 className="mt-0 mb-6 text-4xl font-bold md:text-5xl md:mb-8 text-zinc-800 font-header">
+          <h2 className="mt-0 mb-6 text-4xl font-bold md:text-5xl md:mb-8 text-zinc-800 font-header">
             Decorate your home with plants
-          </h3>
+          </h2>
 
           <p className="mb-5">
             Plants will love a naturally steamy spot, like a kitchen. Bring life
