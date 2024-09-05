@@ -19,7 +19,7 @@ export type CarouselProps = {
 
 const Carousel: FC<CarouselProps> = ({ items }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const listLength = items.length;
+  const listLength = items?.length || 0;
   const elementWidth = ref.current?.offsetWidth || 0;
 
   const { counter, clickNext, clickPrev, isNexTLink, isPrevButton } =
@@ -37,19 +37,20 @@ const Carousel: FC<CarouselProps> = ({ items }) => {
               style={{ transform: `translateX(${counter * elementWidth}px)` }}
               className={`flex flex-row flex-nowrap transition-transform duration-200`}
             >
-              {items.map((item, index) => (
-                <WithTransition
-                  key={item.title}
-                  style={{
-                    defaultStyle: getDefaultStyles(++index),
-                    transitionStyles,
-                  }}
-                  isOpen={isInViewport}
-                  classNames="min-w-full"
-                >
-                  <ItemCard item={item} key={item._id} index={index} />
-                </WithTransition>
-              ))}
+              {items &&
+                items.map((item, index) => (
+                  <WithTransition
+                    key={item.title}
+                    style={{
+                      defaultStyle: getDefaultStyles(++index),
+                      transitionStyles,
+                    }}
+                    isOpen={isInViewport}
+                    classNames="min-w-full"
+                  >
+                    <ItemCard item={item} key={item._id} index={index} />
+                  </WithTransition>
+                ))}
             </div>
           </div>
 

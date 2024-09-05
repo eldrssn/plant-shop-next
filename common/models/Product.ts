@@ -83,7 +83,7 @@ const ProductSchema = new Schema<Product>(
   {
     timestamps: true,
     collection: 'products',
-  }
+  },
 );
 
 const ProductModel =
